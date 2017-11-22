@@ -1,0 +1,372 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+.icon-001-money {
+  background-image: url(../img/sprite.png);
+  background-position: -56px -206px;
+  width: 31px;
+  height: 26px;
+}
+.icon-002-building {
+  background-image: url(../img/sprite.png);
+  background-position: -31px -235px;
+  width: 31px;
+  height: 31px;
+}
+.icon-003-insurance {
+  background-image: url(../img/sprite.png);
+  background-position: 0px -267px;
+  width: 27px;
+  height: 32px;
+}
+.icon-accord {
+  background-image: url(../img/sprite.png);
+  background-position: -298px -243px;
+  width: 6px;
+  height: 11px;
+}
+.icon-airplane {
+  background-image: url(../img/sprite.png);
+  background-position: 0px -235px;
+  width: 31px;
+  height: 32px;
+}
+.icon-cont-us-2 {
+  background-image: url(../img/sprite.png);
+  background-position: -281px 0px;
+  width: 26px;
+  height: 35px;
+}
+.icon-cont-us-3 {
+  background-image: url(../img/sprite.png);
+  background-position: -281px -91px;
+  width: 26px;
+  height: 26px;
+}
+.icon-cont-us-fb {
+  background-image: url(../img/sprite.png);
+  background-position: -281px -169px;
+  width: 26px;
+  height: 26px;
+}
+.icon-cont-us-tw {
+  background-image: url(../img/sprite.png);
+  background-position: -281px -195px;
+  width: 26px;
+  height: 26px;
+}
+.icon-cont-us-yt {
+  background-image: url(../img/sprite.png);
+  background-position: -281px -117px;
+  width: 26px;
+  height: 26px;
+}
+.icon-cont-us1 {
+  background-image: url(../img/sprite.png);
+  background-position: -281px -143px;
+  width: 26px;
+  height: 26px;
+}
+.icon-fb {
+  background-image: url(../img/sprite.png);
+  background-position: -281px -243px;
+  width: 17px;
+  height: 17px;
+}
+.icon-flag_Austria {
+  background-image: url(../img/sprite.png);
+  background-position: -112px -90px;
+  width: 56px;
+  height: 29px;
+}
+.icon-flag_Belgium {
+  background-image: url(../img/sprite.png);
+  background-position: 0px -119px;
+  width: 56px;
+  height: 29px;
+}
+.icon-flag_Canada {
+  background-image: url(../img/sprite.png);
+  background-position: -57px 0px;
+  width: 56px;
+  height: 30px;
+}
+.icon-flag_China {
+  background-image: url(../img/sprite.png);
+  background-position: -112px -119px;
+  width: 56px;
+  height: 29px;
+}
+.icon-flag_Czech-Republic {
+  background-image: url(../img/sprite.png);
+  background-position: -169px 0px;
+  width: 56px;
+  height: 29px;
+}
+.icon-flag_Denmark {
+  background-image: url(../img/sprite.png);
+  background-position: -169px -29px;
+  width: 56px;
+  height: 29px;
+}
+.icon-flag_Estonia {
+  background-image: url(../img/sprite.png);
+  background-position: -169px -58px;
+  width: 56px;
+  height: 29px;
+}
+.icon-flag_Finland {
+  background-image: url(../img/sprite.png);
+  background-position: 0px 0px;
+  width: 57px;
+  height: 31px;
+}
+.icon-flag_France {
+  background-image: url(../img/sprite.png);
+  background-position: -169px -116px;
+  width: 56px;
+  height: 29px;
+}
+.icon-flag_Germany {
+  background-image: url(../img/sprite.png);
+  background-position: 0px -61px;
+  width: 56px;
+  height: 29px;
+}
+.icon-flag_Greece {
+  background-image: url(../img/sprite.png);
+  background-position: -56px -148px;
+  width: 56px;
+  height: 29px;
+}
+.icon-flag_Hungary {
+  background-image: url(../img/sprite.png);
+  background-position: -112px -148px;
+  width: 56px;
+  height: 29px;
+}
+.icon-flag_Iceland {
+  background-image: url(../img/sprite.png);
+  background-position: -168px -148px;
+  width: 56px;
+  height: 29px;
+}
+.icon-flag_Italy {
+  background-image: url(../img/sprite.png);
+  background-position: 0px -177px;
+  width: 56px;
+  height: 29px;
+}
+.icon-flag_Japan {
+  background-image: url(../img/sprite.png);
+  background-position: -56px -177px;
+  width: 56px;
+  height: 29px;
+}
+.icon-flag_Latvia {
+  background-image: url(../img/sprite.png);
+  background-position: -112px -177px;
+  width: 56px;
+  height: 29px;
+}
+.icon-flag_Lebanon {
+  background-image: url(../img/sprite.png);
+  background-position: 0px -31px;
+  width: 56px;
+  height: 30px;
+}
+.icon-flag_Liechtenstein {
+  background-image: url(../img/sprite.png);
+  background-position: -56px -119px;
+  width: 56px;
+  height: 29px;
+}
+.icon-flag_Lithuania {
+  background-image: url(../img/sprite.png);
+  background-position: -225px -29px;
+  width: 56px;
+  height: 29px;
+}
+.icon-flag_Luxembourg {
+  background-image: url(../img/sprite.png);
+  background-position: -225px -58px;
+  width: 56px;
+  height: 29px;
+}
+.icon-flag_Malaysia {
+  background-image: url(../img/sprite.png);
+  background-position: -56px -31px;
+  width: 56px;
+  height: 30px;
+}
+.icon-flag_Malta {
+  background-image: url(../img/sprite.png);
+  background-position: -225px -116px;
+  width: 56px;
+  height: 29px;
+}
+.icon-flag_Mexico {
+  background-image: url(../img/sprite.png);
+  background-position: -225px -145px;
+  width: 56px;
+  height: 29px;
+}
+.icon-flag_Monaco {
+  background-image: url(../img/sprite.png);
+  background-position: -225px -174px;
+  width: 56px;
+  height: 29px;
+}
+.icon-flag_Morocco {
+  background-image: url(../img/sprite.png);
+  background-position: -225px 0px;
+  width: 56px;
+  height: 29px;
+}
+.icon-flag_Netherlands {
+  background-image: url(../img/sprite.png);
+  background-position: 0px -148px;
+  width: 56px;
+  height: 29px;
+}
+.icon-flag_New-Zealand {
+  background-image: url(../img/sprite.png);
+  background-position: -225px -87px;
+  width: 56px;
+  height: 29px;
+}
+.icon-flag_Norway {
+  background-image: url(../img/sprite.png);
+  background-position: -168px -177px;
+  width: 56px;
+  height: 29px;
+}
+.icon-flag_Poland {
+  background-image: url(../img/sprite.png);
+  background-position: 0px -206px;
+  width: 56px;
+  height: 29px;
+}
+.icon-flag_Portugal {
+  background-image: url(../img/sprite.png);
+  background-position: -56px -90px;
+  width: 56px;
+  height: 29px;
+}
+.icon-flag_Slovakia {
+  background-image: url(../img/sprite.png);
+  background-position: 0px -90px;
+  width: 56px;
+  height: 29px;
+}
+.icon-flag_Slovenia {
+  background-image: url(../img/sprite.png);
+  background-position: -113px -58px;
+  width: 56px;
+  height: 29px;
+}
+.icon-flag_Spain {
+  background-image: url(../img/sprite.png);
+  background-position: -113px -29px;
+  width: 56px;
+  height: 29px;
+}
+.icon-flag_Sweden {
+  background-image: url(../img/sprite.png);
+  background-position: -113px 0px;
+  width: 56px;
+  height: 29px;
+}
+.icon-flag_Switzerland {
+  background-image: url(../img/sprite.png);
+  background-position: -56px -61px;
+  width: 56px;
+  height: 29px;
+}
+.icon-flag_Visa-Countries {
+  background-image: url(../img/sprite.png);
+  background-position: -169px -87px;
+  width: 56px;
+  height: 29px;
+}
+.icon-foot-fb {
+  background-image: url(../img/sprite.png);
+  background-position: -62px -235px;
+  width: 28px;
+  height: 28px;
+}
+.icon-foot-info1 {
+  background-image: url(../img/sprite.png);
+  background-position: -121px -206px;
+  width: 12px;
+  height: 14px;
+}
+.icon-foot-info2 {
+  background-image: url(../img/sprite.png);
+  background-position: -133px -206px;
+  width: 12px;
+  height: 12px;
+}
+.icon-foot-info3 {
+  background-image: url(../img/sprite.png);
+  background-position: -145px -206px;
+  width: 12px;
+  height: 9px;
+}
+.icon-foot-insta {
+  background-image: url(../img/sprite.png);
+  background-position: -281px -35px;
+  width: 26px;
+  height: 28px;
+}
+.icon-foot-pin {
+  background-image: url(../img/sprite.png);
+  background-position: -281px -63px;
+  width: 26px;
+  height: 28px;
+}
+.icon-foot-tw {
+  background-image: url(../img/sprite.png);
+  background-position: -90px -235px;
+  width: 28px;
+  height: 28px;
+}
+.icon-foot-yt {
+  background-image: url(../img/sprite.png);
+  background-position: -281px -221px;
+  width: 26px;
+  height: 22px;
+}
+.icon-ph {
+  background-image: url(../img/sprite.png);
+  background-position: -104px -206px;
+  width: 17px;
+  height: 17px;
+}
+.icon-play {
+  background-image: url(../img/sprite.png);
+  background-position: -118px -235px;
+  width: 16px;
+  height: 18px;
+}
+.icon-tw {
+  background-image: url(../img/sprite.png);
+  background-position: -87px -206px;
+  width: 17px;
+  height: 17px;
+}

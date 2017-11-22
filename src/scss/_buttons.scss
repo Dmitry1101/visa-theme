@@ -1,0 +1,19 @@
+.butt{
+	font-family: $f-o-s;
+	font-size: 15px;
+	background-color: $c-yw;
+	color: $c-wh;
+	padding: 11px 46px;
+	border-radius: 50px;
+	border: none;
+	text-transform: uppercase;
+	display: inline-block;
+	min-height: 47px;
+	&:hover{
+		background-color: darken( $c-yw, 10 );
+	}
+}
+
+.morre{
+	// margin: 30px auto 60px
+}
