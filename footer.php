@@ -160,5 +160,22 @@
 
 <?php wp_footer(); ?>
 
+
+<?php 
+if( isset( $_GET['scrollto'] ) ) : ?>
+	
+	<script type="text/javascript">
+		
+		$(function() {
+			$('html, body').animate({
+	        scrollTop: $("#<?php echo $_GET['scrollto']; ?>").offset().top - 100
+	    }, 2000);
+		});
+	
+	</script>	
+
+<?php
+endif; ?>
+
 </body>
 </html>

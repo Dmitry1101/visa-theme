@@ -181,7 +181,7 @@
 												$count = 1;
 											while( have_rows('pricce_item') ): the_row(); ?>
 
-												<div class="deliv__it">
+												<div class="deliv__it <?php echo( $count == 3 ) ? 'actt' : ''; ?>">
 														
 													<?php 
 													if ( $count == 3 ): ?>
@@ -256,9 +256,9 @@
 							tickets until visa is approved. So why risk money and time?
 						</p>
 						<p>
-							<button class="to-mod butt insure__butt">
+							<a href="<?php echo get_page_link( 239 ); ?>" class="to-mod butt insure__butt">
 								Order Insurance
-							</button>
+							</a>
 						</p>
 					</div>
 				</div>

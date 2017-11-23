@@ -169,8 +169,10 @@ blockquote{
 	}
 	
 	li{
-		margin-bottom: 30px;
+		margin-top: 10px;
+		margin-bottom: 20px;
 		position: relative;
+		line-height: 1.7;
 		&:before{
 			content: "";
 			width: 6px;
@@ -194,7 +196,7 @@ blockquote{
 	iframe{
 		width: 100%;
 		height: auto;
-		min-height: 310px;
+		min-height: 410px;
 		display: block;
 		margin: 40px auto;
 	}

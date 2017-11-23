@@ -56,6 +56,14 @@ $(document).ready(function(){
 			}
 	});
 
+	
+	$('.deliv__it').hover(function() {
+		$('.deliv__it.actt').removeClass('actt');
+		/* Stuff to do when the mouse enters the element */
+	}, function() {
+		/* Stuff to do when the mouse leaves the element */
+	});
+
 
 	//Easy animation
 	var waypoints = $('#easy').waypoint({
