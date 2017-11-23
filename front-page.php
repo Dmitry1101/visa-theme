@@ -93,6 +93,10 @@
 			</div>
 		</div><!-- .offer -->
 		
+
+		
+
+
 		<div class="easy s content">
 			<div class="container">
 				<div class="row">
@@ -145,6 +149,128 @@
 				</div>
 			</div>
 		</div><!-- .easy -->
+
+		
+		<div class="s deliv">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-12">
+						
+						<div class="deliv__blck blck-1">
+							<div class="deliv__lisst flexx flexx-wrapp">
+								<div class="deliv__it">
+									<div class="deliv__it-titl">
+										<h4>Flight itinerary</h4>
+										<p>Basic</p>
+									</div>
+									<div class="deliv__it-price">
+										<h5>$50</h5>
+										<p>
+											Per Person
+										</p>
+									</div>
+									<div class="deliv__it-opt">
+										<p><b>24 Hours Delivery</b></p>
+										<ul>
+											<li>Unlimited Flights</li>
+											<li>Upto 4 Corrections</li>
+											<li>Free Cover & NOC Letter</li>
+										</ul>
+									</div>
+									<div class="deliv__it-order">
+										<a class="butt" href="#">order now</a>
+									</div>
+								</div>
+
+
+								<div class="deliv__it">
+									<div class="deliv__it-titl">
+										<h4>HOTEL BOOKING</h4>
+										<p>Basic</p>
+									</div>
+									<div class="deliv__it-price">
+										<h5>$55</h5>
+										<p>
+											Per Person
+										</p>
+									</div>
+									<div class="deliv__it-opt">
+										<p><b>24 Hours Delivery</b></p>
+										<ul>
+											<li>Unlimited Flights</li>
+											<li>Upto 4 Corrections</li>
+											<li>Free Cover & NOC Letter</li>
+										</ul>
+									</div>
+									<div class="deliv__it-order">
+										<a class="butt" href="#">order now</a>
+									</div>
+								</div>
+
+
+								<div class="deliv__it">
+									<div class="deliv__sale">
+										<span>30% Off</span>
+									</div>
+									<div class="deliv__it-titl">
+										<h4>Flight + Hotel</h4>
+										<p>Most Loved</p>
+									</div>
+									<div class="deliv__it-price">
+										<h5>$75</h5>
+										<p>
+											Per Person
+										</p>
+									</div>
+									<div class="deliv__it-opt">
+										<p><b>24 Hours Delivery</b></p>
+										<ul>
+											<li>Unlimited Flights</li>
+											<li>Unlimited Hotels</li>
+											<li>Unlimited Corrections</li>
+											<li>Free Cover & NOC Letter</li>
+										</ul>
+									</div>
+									<div class="deliv__it-order">
+										<a class="butt" href="#">order now</a>
+									</div>
+								</div>
+
+
+								<div class="deliv__it">
+									<div class="deliv__it-titl">
+										<h4>FLIGHT + HOTEL + INSURANCE </h4>
+									</div>
+									<div class="deliv__it-price">
+										<h5>$95</h5>
+										<p>
+											Per Person
+										</p>
+									</div>
+									<div class="deliv__it-opt">
+										<p><b>24 Hours Delivery</b></p>
+										<ul>
+											<li>Unlimited Flights and Hotels</li>
+											<li>Unlimited Corrections</li>
+											<li>Best Travel Insurance</li>
+											<li>$0 deductible, $50,000 coverage</li>
+											<li>Free Cover & NOC LetterORDER NOW</li>
+
+										</ul>
+									</div>
+									<div class="deliv__it-order">
+										<a class="butt" href="#">order now</a>
+									</div>
+								</div>
+
+							</div>
+						</div><!-- .blck-1 -->
+					
+					</div>
+				</div>
+			</div>			
+		</div><!-- deliv -->
+
 
 		<div class="insure flexx flexx-wrap content">
 			<div class="insure__blck insure__blck-1">

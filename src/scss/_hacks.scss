@@ -1,7 +1,7 @@
 * {
 	margin: 0;
 	padding: 0;
-	outline: none;
+	outline: none !important;
 	box-sizing: border-box;
 }
 
@@ -259,10 +259,12 @@ blockquote{
 a{ 
 	transition: all .3s ease-out;
 	text-decoration: none;
-	// color: $c-red;
 	&:hover{
-		// color: darken( $c-red, 10 );
 		text-decoration: underline;
+	}
+
+	&:focus{
+		text-decoration: none;
 	}
 }
 
