@@ -181,3 +181,156 @@ if( function_exists('acf_add_options_page') ) {
 	acf_add_options_page();
 	
 }
+
+
+
+function excerpt($limit) {
+  $excerpt = explode(' ', get_the_excerpt(), $limit);
+  if (count($excerpt)>=$limit) {
+    array_pop($excerpt);
+    $excerpt = implode(" ",$excerpt).'...';
+  } else {
+    $excerpt = implode(" ",$excerpt);
+  }	
+  $excerpt = preg_replace('`[[^]]*]`','',$excerpt);
+  return $excerpt;
+}
+ 
+function content($limit) {
+  $content = explode(' ', get_the_content(), $limit);
+  if (count($content)>=$limit) {
+    array_pop($content);
+    $content = implode(" ",$content).'...';
+  } else {
+    $content = implode(" ",$content);
+  }	
+  $content = preg_replace('/[.+]/','', $content);
+  $content = apply_filters('the_content', $content); 
+  $content = str_replace(']]>', ']]&gt;', $content);
+  return $content;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+//EMAIL SENDING
+add_action( 'wp_footer', 'kd89_ajx_mail_fun', 100 );
+function  kd89_ajx_mail_fun(){
+
+  //Ajax SENDING EMAIL frontend side ?>
+  <script>
+		
+
+    (function($){
+    
+      var ajaxUrl = "<?php echo admin_url('admin-ajax.php')?>";
+
+
+      $('body').on('click', '.morre', function(e){
+
+      	e.preventDefault();	
+      	var obj = {};
+
+        obj.latesst  = $('.blog__list .blog__item').length;	
+        // $('.kd-preload').css('display',)
+        $('.kd-preload').fadeIn(300);	
+        console.log( obj );
+
+        $.post( ajaxUrl , {
+         	latesst: obj.latesst,
+          action:   "kd_89_mail_sending",
+        }).done(function( rezz ){ 
+        	$('.blog__list').append( rezz );	     
+        	$('.kd-preload').fadeOut(300);	
+
+        });
+
+      });
+
+
+
+     
+    
+    
+    
+    }) (jQuery);
+
+
+  </script><?php
+}
+
+
+
+
+//Ajax Sending email server side
+function kd_89_mail_sending( ){
+  header("Content-Type: text/html");
+
+  
+		$args = array(
+								
+			// Type & Status Parameters
+			'post_type'   => 'post',
+	
+			// Order & Orderby Parameters
+			'order'               => 'DESC',
+			'orderby'             => 'date',
+	
+			// Pagination Parameters
+			'posts_per_page'         => 6,
+			'offset'                 => $_POST['latesst'],
+		);
+		
+
+		// the query
+		$kd2_query = new WP_Query( $args );  
+
+		if ( $kd2_query->have_posts() ) : 
+
+			 while ( $kd2_query->have_posts() ) : $kd2_query->the_post(); ?>
+
+				<div data-id="<?php echo get_the_ID(); ?>" class="blog__item" style="background: url('<?php echo get_the_post_thumbnail_url( get_the_ID(), "medium_large" ); ?>') center no-repeat; -webkit-background-size: cover; background-size: cover;">
+					<div class="blog__img">
+						<img src="<?php echo get_the_post_thumbnail_url( get_the_ID(), "medium_large" ); ?>" alt="">	
+					</div>				
+					<div class="blog__content">
+						<div class="blog__date"><?php the_time('M j, Y'); ?> | <?php echo get_comments_number(); ?> comments</div>
+						<div class="blog__content-title">
+
+							<?php the_title(); ?>
+						
+						</div>
+						<div class="blog__content-txt">
+							<p>
+								<?php 
+									echo excerpt(30);
+								?>
+							</p>
+						</div>
+						<p class="blog__content-read">
+							<a href="<?php the_permalink(); ?>">Read More ></a>
+						</p>
+					</div>
+				</div>	
+				
+			<?php 
+			endwhile; 
+				
+			wp_reset_postdata(); 
+
+		endif; 
+
+  exit; 
+}
+add_action('wp_ajax_nopriv_kd_89_mail_sending', 'kd_89_mail_sending'); 
+add_action('wp_ajax_kd_89_mail_sending', 'kd_89_mail_sending');
+

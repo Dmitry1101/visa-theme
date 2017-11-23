@@ -1,46 +1,42 @@
-<?php
-/**
- * The template for displaying all pages
- *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site may use a
- * different template.
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
- * @package visa_reservation
- */
+<?php get_header(); ?>
 
-get_header(); ?>
-
-	<div class="whole">
-			
-			
-
-			
-			
-		<?php 
-		if ( have_posts() ) : while ( have_posts() ) : the_post(); 
-
-			the_title( );
-
-			the_content( );
-			?>
-		
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
 
-		<?php endwhile; ?>
-		
-		<?php endif; ?> ?>	
+	<div class="jumbo jumbo-2 flexx flexx-wrap" style="background: url('<?php echo get_the_post_thumbnail_url( get_the_ID(), "full" ); ?>') top center no-repeat; background-attachment: fixed;">
+		<div class="jumbo-2__txt">
+			<h1><?php the_title( ); ?></h1>
+			<p>
+				Visa Reservation’s Refund Policy
+			</p>
+		</div>
+	</div>
 
 		
+	
+	<div class="mainn s content">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="wrr">
+						
 
-		</div><!-- .whole -->
+						<?php 
+
+							the_content( ); ?>
+
+
+					</div><!-- .wrr -->
+				</div>
+			</div>
+		</div>
+	</div><!-- .mainn -->		
 		
 
+<!-- post -->
+<?php endwhile; endif; ?>
+
+<?php get_footer(); ?>
 
 
-<?php
-// get_sidebar();
-get_footer();
+

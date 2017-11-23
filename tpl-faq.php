@@ -12,7 +12,7 @@
 					Get answers to the most popular questions.
 				</p>
 				<form class="kd89-search kd89-form">
-					<input class="kd89-search__inp" name="s" placeholder="Lorem ipsum dolor sit amet, consectetur"/>
+					<input class="kd89-search__inp" name="faq_s" placeholder="Lorem ipsum dolor sit amet, consectetur"/>
 					<button class="kd89-search__butt" type="submit">SEARCH</button>
 				</form>
 			</div>

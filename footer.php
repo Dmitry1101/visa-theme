@@ -154,6 +154,10 @@
 
 
 
+<div class="kd-preload">
+	<div class="loader">Loading...</div>
+</div>
+
 <?php wp_footer(); ?>
 
 </body>

@@ -22,202 +22,137 @@
 			<div class="row">
 				<div class="col-md-12">
 					
-					<div class="blog__jumbo-1" style="background: url('<?php bloginfo("template_directory");?>/dist/img/jumbo-10.jpg') center no-repeat;">
-						<div class="blog__overl"></div>
-						<div class="blog__blck">
-							<div class="blog__cont">
-								<div class="blog__date">
-									Oct 14, 2017 | 0 comments
-								</div>
-								<div class="blog__jumbo-1-title">
-									Lebanon visa requirements you ought to know – visa reservation
-								</div>
-								<div class="blog__jumbo-1-txt">
-									<p>
-										Lebanon is a country that revels in its urban modernity while invoking a nostalgia of this ancient civilization’s glorious history. It is a place where family, tradition, and hospitality is valu…
-									</p>
-									<p>
-										<a class="blog__jumbo-1-read" href="#">Read More ></a>
-									</p>
-								</div>
-							</div>
-						</div>
-					</div><!-- .col-md-12 -->
-
-					<div class="blog__list">
-						
-						<div class="blog__item" style="background: url('<?php bloginfo("template_directory");?>/dist/img/blog-1.jpg') center no-repeat; -webkit-background-size: cover; background-size: cover;">
-							<div class="blog__img">
-								<img src="<?php bloginfo('template_directory');?>/dist/img/blog-1.jpg" alt="">	
-							</div>				
-							<div class="blog__content">
-								<div class="blog__date">Oct 14, 2017 | 0 comments</div>
-								<div class="blog__content-title">
-									Lebanon visa requirements you ought to know – visa reservation
-								</div>
-								<div class="blog__content-txt">
-									<p>Lebanon is a country that revels in its urban modernity while invoking a nostalgia of this ancient civilization’s glorious history. It is a place where family, tradition, and hospitality is valu…</p>
-								</div>
-								<p class="blog__content-read">
-									<a href="#">Read More ></a>
-								</p>
-							</div>
-						</div>
-
-						<div class="blog__item" style="background: url('<?php bloginfo("template_directory");?>/dist/img/blog-2.jpg') center no-repeat; -webkit-background-size: cover; background-size: cover;">				
-							<div class="blog__img">
-								<img src="<?php bloginfo('template_directory');?>/dist/img/blog-2.jpg" alt="">	
-							</div>
-							<div class="blog__content">
-								<div class="blog__date">Oct 14, 2017 | 0 comments</div>
-								<div class="blog__content-title">
-									The ultimate list of morocco visa requirements – visa reservation
-								</div>
-								<div class="blog__content-txt">
-									<p>
-										Home to the lyrical desert landscapes, ruins of ancient cities, and epic mountain ranges, Morocco is a country that seems to have been custom-made for tourists! Once you fulfill all the…
-									</p>
-								</div>
-								<p class="blog__content-read">
-									<a href="#">Read More ></a>
-								</p>
-							</div>
-						</div>	
-						
-						<div class="blog__item" style="background: url('<?php bloginfo("template_directory");?>/dist/img/blog-3.jpg') center no-repeat; -webkit-background-size: cover; background-size: cover;">
-							<div class="blog__img">
-								<img src="<?php bloginfo('template_directory');?>/dist/img/blog-3.jpg" alt="">	
-							</div>						
-							<div class="blog__content">
-								<div class="blog__date">Oct 14, 2017 | 0 comments</div>
-								<div class="blog__content-title">
-									Key Information On Monaco Visa Requirements – Visa Reservation
-								</div>
-								<div class="blog__content-txt">
-									<p>One of the smallest countries in the world, Monaco is an entire nation squeezed into a few hectares of land. But, make no mistake; this micronation, just outside France, is an ultimate t…</p>
-								</div>
-								<p class="blog__content-read">
-									<a href="#">Read More ></a>
-								</p>
-							</div>
-						</div>
-						
-						<div class="blog__item" style="background: url('<?php bloginfo("template_directory");?>/dist/img/blog-4.jpg') center no-repeat; -webkit-background-size: cover; background-size: cover;">				
-							<div class="blog__img">
-								<img src="<?php bloginfo('template_directory');?>/dist/img/blog-4.jpg" alt="">	
-							</div>
-							<div class="blog__content">
-								<div class="blog__date">Oct 14, 2017 | 0 comments</div>
-								<div class="blog__content-title">
-									A Thorough Guide On Malaysia Visa Requirements – Visa Reservation
-								</div>
-								<div class="blog__content-txt">
-									<p>
-										Home to the lyrical desert landscapes, ruins of ancient cities, and epic mountain ranges, Morocco is a country that seems to have been custom-made for tourists! Once you fulfill all the…
-									</p>
-								</div>
-								<p class="blog__content-read">
-									<a href="#">Read More ></a>
-								</p>
-							</div>
-						</div>	
-						
-						<div class="blog__item" style="background: url('<?php bloginfo("template_directory");?>/dist/img/blog-5.jpg') center no-repeat; -webkit-background-size: cover; background-size: cover;">
-							<div class="blog__img">
-								<img src="<?php bloginfo('template_directory');?>/dist/img/blog-5.jpg" alt="">	
-							</div>						
-							<div class="blog__content">
-								<div class="blog__date">Oct 14, 2017 | 0 comments</div>
-								<div class="blog__content-title">
-									Canada Visa Requirements You Need To Know – Visa Reservation
-								</div>
-								<div class="blog__content-txt">
-									<p>One of the smallest countries in the world, Monaco is an entire nation squeezed into a few hectares of land. But, make no mistake; this micronation, just outside France, is an ultimate t…</p>
-								</div>
-								<p class="blog__content-read">
-									<a href="#">Read More ></a>
-								</p>
-							</div>
-						</div>
-						
-						<div class="blog__item" style="background: url('<?php bloginfo("template_directory");?>/dist/img/blog-6.jpg') center no-repeat; -webkit-background-size: cover; background-size: cover;">				
-							<div class="blog__img">
-								<img src="<?php bloginfo('template_directory');?>/dist/img/blog-6.jpg" alt="">	
-							</div>
-							<div class="blog__content">
-								<div class="blog__date">Oct 14, 2017 | 0 comments</div>
-								<div class="blog__content-title">
-									The Absolute Guide To Mexico Visa Requirements – Visa Reservation
-								</div>
-								<div class="blog__content-txt">
-									<p>
-										Home to the lyrical desert landscapes, ruins of ancient cities, and epic mountain ranges, Morocco is a country that seems to have been custom-made for tourists! Once you fulfill all the…
-									</p>
-								</div>
-								<p class="blog__content-read">
-									<a href="#">Read More ></a>
-								</p>
-							</div>
-						</div>
-
-						<div class="blog__item" style="background: url('<?php bloginfo("template_directory");?>/dist/img/blog-7.jpg') center no-repeat; -webkit-background-size: cover; background-size: cover;">
-							<div class="blog__img">
-								<img src="<?php bloginfo('template_directory');?>/dist/img/blog-7.jpg" alt="">	
-							</div>						
-							<div class="blog__content">
-								<div class="blog__date">Oct 14, 2017 | 0 comments</div>
-								<div class="blog__content-title">
-									Guide To New Zealand Visa Requirements – Visa Reservation
-								</div>
-								<div class="blog__content-txt">
-									<p>One of the smallest countries in the world, Monaco is an entire nation squeezed into a few hectares of land. But, make no mistake; this micronation, just outside France, is an ultimate t…</p>
-								</div>
-								<p class="blog__content-read">
-									<a href="#">Read More ></a>
-								</p>
-							</div>
-						</div>
-
-						<div class="blog__item" style="background: url('<?php bloginfo("template_directory");?>/dist/img/blog-8.jpg') center no-repeat; -webkit-background-size: cover; background-size: cover;">				
-							<div class="blog__img">
-								<img src="<?php bloginfo('template_directory');?>/dist/img/blog-8.jpg" alt="">	
-							</div>
-							<div class="blog__content">
-								<div class="blog__date">Oct 14, 2017 | 0 comments</div>
-								<div class="blog__content-title">
-									A Must Follow Guide To Japan Visa Requirements – Visa Reservation
-								</div>
-								<div class="blog__content-txt">
-									<p>
-										Japan needs no introduction — it is one of the most developed economies and is a front runner in innovation and technology. Being one of the timeless nations in the world, Japan of
-									</p>
-								</div>
-								<p class="blog__content-read">
-									<a href="#">Read More ></a>
-								</p>
-							</div>
-						</div>	
-						
-						<div class="blog__item" style="background: url('<?php bloginfo("template_directory");?>/dist/img/blog-9.jpg') center no-repeat; -webkit-background-size: cover; background-size: cover;">
-							<div class="blog__img">
-								<img src="<?php bloginfo('template_directory');?>/dist/img/blog-9.jpg" alt="">	
-							</div>						
-							<div class="blog__content">
-								<div class="blog__date">Oct 14, 2017 | 0 comments</div>
-								<div class="blog__content-title">
-									Key Information On Monaco Visa Requirements – Visa Reservation
-								</div>
-								<div class="blog__content-txt">
-									<p>One of the smallest countries in the world, Monaco is an entire nation squeezed into a few hectares of land. But, make no mistake; this micronation, just outside France, is an ultimate t…</p>
-								</div>
-								<p class="blog__content-read">
-									<a href="#">Read More ></a>
-								</p>
-							</div>
-						</div>
-
-					</div><!-- .blog__list -->	
 					
+					<?php 	
+					$args = array(
+											
+						// Type & Status Parameters
+						'post_type'   => 'post',
+						'post_status' => 'any',
+				
+						// Order & Orderby Parameters
+						'order'               => 'DESC',
+						'orderby'             => 'date',
+				
+						// Pagination Parameters
+						'posts_per_page'         => 1,
+						'offset'                 => 0,
+					);
+					
+		
+					// the query
+					$kd1_query = new WP_Query( $args );  
+
+					if ( $kd1_query->have_posts() ) : 
+
+					 while ( $kd1_query->have_posts() ) : $kd1_query->the_post(); ?>
+
+						
+						<div class="blog__jumbo-1" style="background: url('<?php echo get_the_post_thumbnail_url( get_the_ID(), 'full' ); ?>') center no-repeat; -webkit-background-size: cover;
+						background-size: cover;">
+							<div class="blog__overl"></div>
+							<div class="blog__blck">
+								<div class="blog__cont">
+									<div class="blog__date">
+										<?php the_time('M j, Y'); ?>	
+										| <?php echo get_comments_number(); ?> comments
+									</div>
+									<div class="blog__jumbo-1-title">
+										
+										<?php the_title(); ?>
+									
+									</div>
+									<div class="blog__jumbo-1-txt">
+										<p>
+											<?php 
+												echo excerpt(40);
+											?>
+										</p>
+										
+										<p>
+											<a class="blog__jumbo-1-read" href="<?php the_permalink(); ?>">Read More ></a>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div><!-- .col-md-12 -->
+
+					<?php 
+					endwhile; 
+
+					wp_reset_postdata();  
+
+					endif; ?>
+
+					
+
+				
+
+					<?php 	
+					$args = array(
+											
+						// Type & Status Parameters
+						'post_type'   => 'post',
+						'post_status' => 'any',
+				
+						// Order & Orderby Parameters
+						'order'               => 'DESC',
+						'orderby'             => 'date',
+				
+						// Pagination Parameters
+						'posts_per_page'         => 9,
+						'offset'                 => 1,
+					);
+					
+		
+					// the query
+					$kd2_query = new WP_Query( $args );  
+
+					if ( $kd2_query->have_posts() ) : ?>
+					
+					<div class="blog__list">
+
+						<?php	
+						 while ( $kd2_query->have_posts() ) : $kd2_query->the_post(); ?>
+
+							
+							<div data-id="<?php echo get_the_ID(); ?>" class="blog__item" style="background: url('<?php echo get_the_post_thumbnail_url( get_the_ID(), "medium_large" ); ?>') center no-repeat; -webkit-background-size: cover; background-size: cover;">
+								<div class="blog__img">
+									<img src="<?php echo get_the_post_thumbnail_url( get_the_ID(), "medium_large" ); ?>" alt="">	
+								</div>				
+								<div class="blog__content">
+									<div class="blog__date"><?php the_time('M j, Y'); ?> | <?php echo get_comments_number(); ?> comments</div>
+									<div class="blog__content-title">
+
+										<?php the_title(); ?>
+									
+									</div>
+									<div class="blog__content-txt">
+										<p>
+											<?php 
+												echo excerpt(30);
+											?>
+										</p>
+									</div>
+									<p class="blog__content-read">
+										<a href="<?php the_permalink(); ?>">Read More ></a>
+									</p>
+								</div>
+							</div>	
+							
+
+						<?php 
+						endwhile; 
+
+							
+						wp_reset_postdata(); ?>
+					
+					</div><!-- .blog__list -->
+
+					<?php
+					endif; ?>
+
+		
 					<div class="txt-cent blog__foot">
 						<button class="butt morre">Load more</button>
 												
