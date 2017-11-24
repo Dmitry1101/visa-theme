@@ -70,6 +70,7 @@ gulp.task('js', function () {
     .pipe(order([
       "jquery-3.2.1.js",
       "selectric.js",
+      "jquery.waypoints.js",
       "main.js"
     ]))
     .pipe(concat('all.js'))

@@ -17,3 +17,20 @@
 .morre{
 	// margin: 30px auto 60px
 }
+
+.deliv__butt{
+	display: inline-block;
+	padding: 10px 25px;
+	border-radius: 30px;
+	background-color: #E2E2E2;
+	color: #606060;
+	border: none;
+	font-size: 13px;
+	font-family: $f-o-s;
+	margin: 0 7px;
+	cursor: pointer;
+	&.active{
+		background-color: $c-grn;
+		color: $c-wh
+	}
+}

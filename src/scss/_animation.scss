@@ -14,6 +14,18 @@
 }
 
 
+@keyframes tabb {
+    0%   {
+      transform: translateY(150px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+}
+
+
 .kd-preload{
 	position: fixed;
 	z-index: 99;

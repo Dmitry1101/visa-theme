@@ -97,7 +97,7 @@
 		
 
 
-		<div class="easy s content">
+		<div class="easy s content" id="easy">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
@@ -107,7 +107,7 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-md-4">
+					<div class="col-md-4" >
 						<div class="blck easy__blck easy__blck-1">
 							<div class="easy__num">
 								1
@@ -151,120 +151,88 @@
 		</div><!-- .easy -->
 
 		
-		<div class="s deliv">
+		<div class="s deliv" id="delivery">
+			
+			<div class="deliv__butts">
+				<button class="deliv__butt active" data-to=".deliv__blck.blck-1">24 Hr Email Delivery</button>
+				<button class="deliv__butt" data-to=".deliv__blck.blck-2">6 Hr Email Delivery</button>
+			</div><!-- .deliv__butts -->
+
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-md-12">
 						
-						<div class="deliv__blck blck-1">
-							<div class="deliv__lisst flexx flexx-wrapp">
-								<div class="deliv__it">
-									<div class="deliv__it-titl">
-										<h4>Flight itinerary</h4>
-										<p>Basic</p>
-									</div>
-									<div class="deliv__it-price">
-										<h5>$50</h5>
-										<p>
-											Per Person
-										</p>
-									</div>
-									<div class="deliv__it-opt">
-										<p><b>24 Hours Delivery</b></p>
-										<ul>
-											<li>Unlimited Flights</li>
-											<li>Upto 4 Corrections</li>
-											<li>Free Cover & NOC Letter</li>
-										</ul>
-									</div>
-									<div class="deliv__it-order">
-										<a class="butt" href="#">order now</a>
-									</div>
-								</div>
 
+						<?php 
 
-								<div class="deliv__it">
-									<div class="deliv__it-titl">
-										<h4>HOTEL BOOKING</h4>
-										<p>Basic</p>
-									</div>
-									<div class="deliv__it-price">
-										<h5>$55</h5>
-										<p>
-											Per Person
-										</p>
-									</div>
-									<div class="deliv__it-opt">
-										<p><b>24 Hours Delivery</b></p>
-										<ul>
-											<li>Unlimited Flights</li>
-											<li>Upto 4 Corrections</li>
-											<li>Free Cover & NOC Letter</li>
-										</ul>
-									</div>
-									<div class="deliv__it-order">
-										<a class="butt" href="#">order now</a>
-									</div>
-								</div>
+						if( have_rows('kd_acf_prices') ): 
 
+							$cc = 1;
 
-								<div class="deliv__it">
-									<div class="deliv__sale">
-										<span>30% Off</span>
-									</div>
-									<div class="deliv__it-titl">
-										<h4>Flight + Hotel</h4>
-										<p>Most Loved</p>
-									</div>
-									<div class="deliv__it-price">
-										<h5>$75</h5>
-										<p>
-											Per Person
-										</p>
-									</div>
-									<div class="deliv__it-opt">
-										<p><b>24 Hours Delivery</b></p>
-										<ul>
-											<li>Unlimited Flights</li>
-											<li>Unlimited Hotels</li>
-											<li>Unlimited Corrections</li>
-											<li>Free Cover & NOC Letter</li>
-										</ul>
-									</div>
-									<div class="deliv__it-order">
-										<a class="butt" href="#">order now</a>
-									</div>
-								</div>
+							while( have_rows('kd_acf_prices') ): the_row(); ?>
+								
+								<div class="deliv__blck blck-<?php echo $cc; ?>">
+									<div class="deliv__lisst flexx flexx-wrapp">	
+									
+										<?php 
+										if( have_rows('pricce_item') ): ?>
+												
+											<?php 
+												$count = 1;
+											while( have_rows('pricce_item') ): the_row(); ?>
 
+												<div class="deliv__it">
+														
+													<?php 
+													if ( $count == 3 ): ?>
+														
+														<div class="deliv__sale">
+															<span>30% Off</span>
+														</div>
 
-								<div class="deliv__it">
-									<div class="deliv__it-titl">
-										<h4>FLIGHT + HOTEL + INSURANCE </h4>
-									</div>
-									<div class="deliv__it-price">
-										<h5>$95</h5>
-										<p>
-											Per Person
-										</p>
-									</div>
-									<div class="deliv__it-opt">
-										<p><b>24 Hours Delivery</b></p>
-										<ul>
-											<li>Unlimited Flights and Hotels</li>
-											<li>Unlimited Corrections</li>
-											<li>Best Travel Insurance</li>
-											<li>$0 deductible, $50,000 coverage</li>
-											<li>Free Cover & NOC LetterORDER NOW</li>
+													<?php 
+													endif ?>	
+														
 
-										</ul>
-									</div>
-									<div class="deliv__it-order">
-										<a class="butt" href="#">order now</a>
-									</div>
-								</div>
+													<div class="deliv__it-titl">
+														
+														<?php the_sub_field('titl'); ?>
+													
+													</div>
+													<div class="deliv__it-price">
+														
+														<?php the_sub_field('pricce'); ?>
+														
+													</div>
+													<div class="deliv__it-opt">
+														
+														<?php the_sub_field('txt'); ?>
 
-							</div>
-						</div><!-- .blck-1 -->
+													</div>
+													<div class="deliv__it-order">
+														<a class="butt" href="<?php the_sub_field('page_link'); ?>">order now</a>
+													</div>
+												</div>
+
+											<?php 
+												$count++;
+											endwhile; ?>
+											
+
+										<?php 
+										endif; //if( get_sub_field('pricce_item') ): ?>
+								
+									</div>
+								</div><!-- .blck-1 -->
+
+							<?php 
+
+								$cc++;
+
+							endwhile; // while( has_sub_field('kd_acf_prices') ): 
+
+						 endif; // if( get_field('kd_acf_prices') ): ?>
+
 					
 					</div>
 				</div>
@@ -307,7 +275,8 @@
 							WE’RE HERE TO HELP
 						</div>
 						<div class="tbl-cell cell-2 mdl">
-							<a class="inffo__play play__trigger" href="#" data-hreff='<iframe width="854" height="480" src="https://www.youtube.com/embed/hTWKbfoikeg?autoplay=1" frameborder="0" gesture="media" allowfullscreen></iframe>'>
+							<a class="inffo__play play__trigger" href="#" data-hreff='<iframe width="854" height="480" src="https://www.youtube.com/embed/9HPOyGMLHy4?autoplay=1" frameborder="0" gesture="media" allowfullscreen></iframe>'>
+
 									<i class="icon icon-play"></i>
 								</a>
 						</div>
@@ -317,59 +286,42 @@
 					</div>
 				</div>
 			</div>
+			
+
+
+
 			<div class="inffo__blck inffo__blck-2">
-				<div class="inffo__subb">
-					<div class="inffo__cell" style="background: url('<?php bloginfo("template_directory");?>/dist/img/inffo2.jpg') center no-repeat; -webkit-background-size: cover; background-size: cover;">
-						<div class="inffo__cell-cont">
-							<p>
-								<b>Don't buy tickets</b>
-							</p>
-							<p>
-								Embassy recommends not to purchase actual tickets until visa is approved
-							<br>
-								<a href="#">See why...</a>
-							</p>
+				
+				
+				<?php
+				if( have_rows('kd_acf_info') ): 
+
+					while ( have_rows('kd_acf_info') ) : the_row(); 	?>
+					
+						<div class="inffo__subb">
+							<div class="inffo__cell" style="background: url('<?php echo wp_get_attachment_image_src( get_sub_field("image_1"), "medium_large" )[0]; ?>') center no-repeat; -webkit-background-size: cover; background-size: cover;">
+								<div class="inffo__cell-cont">
+									<?php the_sub_field('text_1'); ?>
+								</div>
+							</div>
+							<div class="inffo__cell" style="background: url('<?php echo wp_get_attachment_image_src( get_sub_field("image_2"), "medium_large" )[0]; ?>') center no-repeat; -webkit-background-size: cover; background-size: cover;">
+								<div class="inffo__cell-cont">
+									<?php the_sub_field('text_2'); ?>
+								</div>
+							</div>
 						</div>
-					</div>
-					<div class="inffo__cell" style="background: url('<?php bloginfo("template_directory");?>/dist/img/inffo3.jpg') center no-repeat; -webkit-background-size: cover; background-size: cover;">
-						<div class="inffo__cell-cont">
-							<p>
-								<b>Order reservations</b>
-							</p>
-							<p>
-								Order with us. We will take care of all reservations and cancellations for you
-								<br>
-								<a href="#">See why...</a>
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="inffo__subb">
-					<div class="inffo__cell" style="background: url('<?php bloginfo("template_directory");?>/dist/img/inffo4.jpg') center no-repeat; -webkit-background-size: cover; background-size: cover;">
-						<div class="inffo__cell-cont">
-							<p>
-								<b>Get Visa</b>
-							</p>
-							<p>
-								Embassy perfectly accepts bookings as itineraries show true intent of travel
-							<br>
-								<a href="#">See why...</a>
-							</p>
-						</div>
-					</div>
-					<div class="inffo__cell" style="background: url('<?php bloginfo("template_directory");?>/dist/img/inffo5.jpg') center no-repeat; -webkit-background-size: cover; background-size: cover;">
-						<div class="inffo__cell-cont">
-							<p>
-								<b>Plan Trip</b>
-							</p>
-							<p>
-								After your visa gets approved, you can then make your own travel plans!
-							<br>
-								<a href="#">See why...</a>
-							</p>
-						</div>
-					</div>
-				</div>
+						
+					<?php
+			    endwhile; 
+
+				endif; ?>	
+
+				
+
+				
+
+
+
 
 			</div>
 		</div><!-- .inffo -->	
@@ -560,177 +512,63 @@
 							<div class="sect-title under under-2">
 								Check visa requirements
 							</div>
-							<div class="row">
-								<div class="col-lg-3 col-sm-6">
-									<div class="tbl">
-										<div class="tbl-cell cell-1 mdl">
-											<i class="icon icon-flag_Austria"></i>
-										</div>
-										<div class="tbl-cell cell-2 mdl">
-											<a href="#">Austria</a>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-3 col-sm-6">
-									<div class="tbl">
-										<div class="tbl-cell cell-1 mdl">
-											<i class="icon icon-flag_Belgium"></i>
-										</div>
-										<div class="tbl-cell cell-2 mdl">
-											<a href="#">Belgium</a>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-3 col-sm-6">
-									<div class="tbl">
-										<div class="tbl-cell cell-1 mdl">
-											<i class="icon icon-flag_Czech-Republic"></i>
-										</div>
-										<div class="tbl-cell cell-2 mdl">
-											<a href="#">Czech Republic</a>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-3 col-sm-6">
-									<div class="tbl">
-										<div class="tbl-cell cell-1 mdl">
-											<i class="icon icon-flag_China"></i>
-										</div>
-										<div class="tbl-cell cell-2 mdl">
-											<a href="#">China</a>
-										</div>
-									</div>
-								</div>
-							</div>
 							
-							<div class="row">
-								<div class="col-lg-3 col-sm-6">
-									<div class="tbl">
-										<div class="tbl-cell cell-1 mdl">
-											<i class="icon icon-flag_Denmark"></i>
-										</div>
-										<div class="tbl-cell cell-2 mdl">
-											<a href="#">Denmark</a>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-3 col-sm-6">
-									<div class="tbl">
-										<div class="tbl-cell cell-1 mdl">
-											<i class="icon icon-flag_Estonia"></i>
-										</div>
-										<div class="tbl-cell cell-2 mdl">
-											<a href="#">Estonia</a>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-3 col-sm-6">
-									<div class="tbl">
-										<div class="tbl-cell cell-1 mdl">
-											<i class="icon icon-flag_Germany"></i>
-										</div>
-										<div class="tbl-cell cell-2 mdl">
-											<a href="#">Germany</a>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-3 col-sm-6">
-									<div class="tbl">
-										<div class="tbl-cell cell-1 mdl">
-											<i class="icon icon-flag_Greece"></i>
-										</div>
-										<div class="tbl-cell cell-2 mdl">
-											<a href="#">Greece</a>
-										</div>
-									</div>
-								</div>
-							</div>
-								
-							<div class="row">
-								<div class="col-lg-3 col-sm-6">
-									<div class="tbl">
-										<div class="tbl-cell cell-1 mdl">
-											<i class="icon icon-flag_Hungary"></i>
-										</div>
-										<div class="tbl-cell cell-2 mdl">
-											<a href="#">Hungary</a>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-3 col-sm-6">
-									<div class="tbl">
-										<div class="tbl-cell cell-1 mdl">
-											<i class="icon icon-flag_Iceland"></i>
-										</div>
-										<div class="tbl-cell cell-2 mdl">
-											<a href="#">Iceland</a>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-3 col-sm-6">
-									<div class="tbl">
-										<div class="tbl-cell cell-1 mdl">
-											<i class="icon icon-flag_Italy"></i>
-										</div>
-										<div class="tbl-cell cell-2 mdl">
-											<a href="#">Italy</a>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-3 col-sm-6">
-									<div class="tbl">
-										<div class="tbl-cell cell-1 mdl">
-											<i class="icon icon-flag_Sweden"></i>
-										</div>
-										<div class="tbl-cell cell-2 mdl">
-											<a href="#">Sweden</a>
-										</div>
-									</div>
-								</div>
-							</div>	
+							
+							<?php
 
-							<div class="row">
-								<div class="col-lg-3 col-sm-6">
-									<div class="tbl">
-										<div class="tbl-cell cell-1 mdl">
-											<i class="icon icon-flag_Netherlands"></i>
+							if( have_rows('kd_acf_countries') ): ?>
+								
+								<div class="row">
+
+									<?php
+									$i = 0;
+							    
+							    while ( have_rows('kd_acf_countries') ) : the_row(); 
+
+							    	$countrry = get_sub_field('countryy');
+							    	$countrry = trim($countrry);
+							    	$countrry = str_replace(' ', '-', $countrry);
+							    	?>
+									
+										<div class="col-lg-3 col-sm-6">
+											<div class="tbl">
+												<div class="tbl-cell cell-1 mdl">
+													<i class="icon icon-flag_<?php echo $countrry; ?>"></i>
+												</div>
+												<div class="tbl-cell cell-2 mdl">
+													<a href="<?php echo ( get_sub_field('post_link') ) ? get_sub_field('post_link') : get_page_link( 36 ); ?>"><?php the_sub_field('countryy'); ?></a>
+												</div>
+											</div>
 										</div>
-										<div class="tbl-cell cell-2 mdl">
-											<a href="#">Netherlands</a>
+										
+									<?php
+									$i++;
+							    
+							    	if ( $i % 4 == 0 ) :
+						    			
+						    			echo '</div><div class="row">';
+
+						    		endif;	
+
+							    endwhile; ?>
+
+								</div><!-- .row -->
+
+								
+								<div class="row">
+									<div class="col-md-12">
+										<div class="why__view-all">
+											<a href="<?php echo get_page_link( 36 ); ?>">View All </a>
+											<span>&raquo;</span>
 										</div>
 									</div>
-								</div>
-								<div class="col-lg-3 col-sm-6">
-									<div class="tbl">
-										<div class="tbl-cell cell-1 mdl">
-											<i class="icon icon-flag_Portugal"></i>
-										</div>
-										<div class="tbl-cell cell-2 mdl">
-											<a href="#">Portugal</a>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-3 col-sm-6">
-									<div class="tbl">
-										<div class="tbl-cell cell-1 mdl">
-											<i class="icon icon-flag_Spain"></i>
-										</div>
-										<div class="tbl-cell cell-2 mdl">
-											<a href="#">Spain</a>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-3 col-sm-6">
-									<div class="tbl">
-										<div class="tbl-cell cell-1 mdl">
-											<i class="icon icon-flag_Visa-Countries"></i>
-										</div>
-										<div class="tbl-cell cell-2 mdl">
-											<a href="#">Visa Countries</a>
-										</div>
-									</div>
-								</div>
-							</div>	
+								</div>	
+
+						  <?php  
+							endif; ?>
+
+
+							
 
 						</div>
 					</div>

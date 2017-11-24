@@ -45,6 +45,8 @@ if ( ! function_exists( 'visa_reservation_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'menu-1' => esc_html__( 'Primary', 'visa_reservation' ),
+			'menu-2' => esc_html__( 'Language', 'visa_reservation' ),
+
 			'menu-foot-1' => esc_html__( 'Footer 1', 'visa_reservation' ),
 			'menu-foot-2' => esc_html__( 'Footer 2', 'visa_reservation' ),
 			'menu-foot-3' => esc_html__( 'Footer 3', 'visa_reservation' ),

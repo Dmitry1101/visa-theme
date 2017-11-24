@@ -75,11 +75,33 @@
 
 				<span class="topp__div">|</span>
 				<div class="topp__sel">
-					ENGLISH
-					<i>&#9660;</i>
+					
+					<?php wp_nav_menu( array(
+						'theme_location'  => 'menu-2',
+						'menu'            => '',
+						'container'       => '',
+						'container_class' => '',
+						'container_id'    => '',
+						'menu_class'      => 'lang-menu',
+						'menu_id'         => '',
+						'echo'            => true,
+						'fallback_cb'     => 'wp_page_menu',
+						'before'          => '',
+						'after'           => '',
+						'link_before'     => '',
+						'link_after'      => '',
+						'items_wrap'      => '<ul id = "%1$s" class = "%2$s">%3$s</ul>',
+						'depth'           => 0,
+						'walker'          => '',
+					) ); ?>
+
+
+					<?php// echo do_shortcode('[google-translator image="yes" text="yes" image_size="24"]'); ?>
+					<!-- ENGLISH -->
+					<!-- <i>&#9660;</i> -->
 				</div>
-				<div class="topp__country">
+<!-- 				<div class="topp__country">
 					<img src="<?php bloginfo('template_directory');?>/dist/img/country1.jpg" alt="">
-				</div>
+				</div> -->
 			</div>
 		</div>

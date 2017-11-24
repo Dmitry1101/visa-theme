@@ -27,6 +27,55 @@ $(document).ready(function(){
 		obj.parr.html( obj.hreff );
 	}); 
 
+	//set active tab
+	(function () {
+		var obj = {
+			actiff: $('.deliv__butt.active'),
+			init: function(){
+				this.dataTo = this.actiff.attr('data-to');
+				$(this.dataTo).css('display','block');
+			} 	
+		};
+		obj.init();
+		// console.log( obj );
+	})();
+
+	$('body').on('click', '.deliv__butt', function(e){
+			e.preventDefault();
+			var dataTo = $(this).attr('data-to');
+			if( $(this).hasClass('active') ){
+				return false;
+			}
+			else{
+				// $('.deliv__butt')	
+				$('.deliv__blck').css('display','none');
+				$(dataTo).css('display','block');
+				$('.deliv__butt').removeClass('active');
+				$(this).addClass('active');
+				// console.log( dataTo );
+			}
+	});
+
+
+	//Easy animation
+	var waypoints = $('#easy').waypoint({
+	  handler: function(direction) {
+	  	if( $(this.element).hasClass('active') ){
+	  		return false;	
+	  	}	
+	  	else{
+	  		$(this.element).addClass('active');
+	  	}
+	  	
+	  	// console.log( this.element.id + ' hit' );
+	    
+	    // notify(this.element.id + ' hit')
+	  },
+	  offset: '50%',
+
+	})
+
+
 	
 	$(window).on('resize', function() {  
 
@@ -61,47 +110,6 @@ $(document).ready(function(){
 		}
 	})(); 
 	
-	// $('body').on('click', '.morre', function(){
-		
-	// 	var httml = '<div class="blog__item" style="background: url(\'http://vr.s3.devpreviewr.com/wp-content/themes/visa_reservation/dist/img/blog-8.jpg\') center no-repeat; -webkit-background-size: cover; background-size: cover;">' +
-	// 						'<div class="blog__img">' +
-	// 							'<img src="http://vr.s3.devpreviewr.com/wp-content/themes/visa_reservation/dist/img/blog-8.jpg" alt="">' +
-	// 						'</div>'	+					
-	// 						'<div class="blog__content">' +
-	// 							'<div class="blog__date">Oct 14, 2017 | 0 comments</div>' +
-	// 							'<div class="blog__content-title">' +
-	// 								'Key Information On Monaco Visa Requirements – Visa Reservation' +
-	// 							'</div>' +
-	// 							'<div class="blog__content-txt">' +
-	// 								'<p>One of the smallest countries in the world, Monaco is an entire nation squeezed into a few hectares of land. But, make no mistake; this micronation, just outside France, is an ultimate t…</p>' +
-	// 							'</div>' +
-	// 							'<p class="blog__content-read">' +
-	// 								'<a href="#">Read More ></a>' +
-	// 							'</p>' +
-	// 						'</div>' +
-	// 					'</div>' +
-
-	// 					'<div class="blog__item" style="background: url(\'http://vr.s3.devpreviewr.com/wp-content/themes/visa_reservation/dist/img/blog-5.jpg\') center no-repeat; -webkit-background-size: cover; background-size: cover;">' +
-	// 						'<div class="blog__img">' +
-	// 							'<img src="http://vr.s3.devpreviewr.com/wp-content/themes/visa_reservation/dist/img/blog-5.jpg" alt="">' +
-	// 						'</div>'	+					
-	// 						'<div class="blog__content">' +
-	// 							'<div class="blog__date">Oct 14, 2017 | 0 comments</div>' +
-	// 							'<div class="blog__content-title">' +
-	// 								'Key Information On Monaco Visa Requirements – Visa Reservation' +
-	// 							'</div>' +
-	// 							'<div class="blog__content-txt">' +
-	// 								'<p>One of the smallest countries in the world, Monaco is an entire nation squeezed into a few hectares of land. But, make no mistake; this micronation, just outside France, is an ultimate t…</p>' +
-	// 							'</div>' +
-	// 							'<p class="blog__content-read">' +
-	// 								'<a href="#">Read More ></a>' +
-	// 							'</p>' +
-	// 						'</div>' +
-	// 					'</div>';
-
-	// 	$('.blog__list').append(httml);
-	// });
-
 
 });
 
