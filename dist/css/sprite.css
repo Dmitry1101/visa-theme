@@ -54,13 +54,13 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-cont-us-3 {
   background-image: url(../img/sprite.png);
-  background-position: -281px -91px;
+  background-position: -281px -143px;
   width: 26px;
   height: 26px;
 }
 .icon-cont-us-fb {
   background-image: url(../img/sprite.png);
-  background-position: -281px -169px;
+  background-position: -281px -91px;
   width: 26px;
   height: 26px;
 }
@@ -72,15 +72,21 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-cont-us-yt {
   background-image: url(../img/sprite.png);
-  background-position: -281px -117px;
+  background-position: -281px -169px;
   width: 26px;
   height: 26px;
 }
 .icon-cont-us1 {
   background-image: url(../img/sprite.png);
-  background-position: -281px -143px;
+  background-position: -281px -117px;
   width: 26px;
   height: 26px;
+}
+.icon-down-arrow {
+  background-image: url(../img/sprite.png);
+  background-position: -121px -206px;
+  width: 16px;
+  height: 16px;
 }
 .icon-fb {
   background-image: url(../img/sprite.png);
@@ -90,13 +96,13 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-flag_Austria {
   background-image: url(../img/sprite.png);
-  background-position: -112px -90px;
+  background-position: 0px -119px;
   width: 56px;
   height: 29px;
 }
 .icon-flag_Belgium {
   background-image: url(../img/sprite.png);
-  background-position: 0px -119px;
+  background-position: -56px -119px;
   width: 56px;
   height: 29px;
 }
@@ -108,25 +114,25 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-flag_China {
   background-image: url(../img/sprite.png);
-  background-position: -112px -119px;
+  background-position: -169px 0px;
   width: 56px;
   height: 29px;
 }
 .icon-flag_Czech-Republic {
   background-image: url(../img/sprite.png);
-  background-position: -169px 0px;
+  background-position: -169px -29px;
   width: 56px;
   height: 29px;
 }
 .icon-flag_Denmark {
   background-image: url(../img/sprite.png);
-  background-position: -169px -29px;
+  background-position: -169px -58px;
   width: 56px;
   height: 29px;
 }
 .icon-flag_Estonia {
   background-image: url(../img/sprite.png);
-  background-position: -169px -58px;
+  background-position: -169px -87px;
   width: 56px;
   height: 29px;
 }
@@ -138,49 +144,49 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-flag_France {
   background-image: url(../img/sprite.png);
-  background-position: -169px -116px;
+  background-position: 0px -61px;
   width: 56px;
   height: 29px;
 }
 .icon-flag_Germany {
   background-image: url(../img/sprite.png);
-  background-position: 0px -61px;
+  background-position: -56px -148px;
   width: 56px;
   height: 29px;
 }
 .icon-flag_Greece {
   background-image: url(../img/sprite.png);
-  background-position: -56px -148px;
+  background-position: -112px -148px;
   width: 56px;
   height: 29px;
 }
 .icon-flag_Hungary {
   background-image: url(../img/sprite.png);
-  background-position: -112px -148px;
+  background-position: -168px -148px;
   width: 56px;
   height: 29px;
 }
 .icon-flag_Iceland {
   background-image: url(../img/sprite.png);
-  background-position: -168px -148px;
+  background-position: 0px -177px;
   width: 56px;
   height: 29px;
 }
 .icon-flag_Italy {
   background-image: url(../img/sprite.png);
-  background-position: 0px -177px;
+  background-position: -56px -177px;
   width: 56px;
   height: 29px;
 }
 .icon-flag_Japan {
   background-image: url(../img/sprite.png);
-  background-position: -56px -177px;
+  background-position: -112px -177px;
   width: 56px;
   height: 29px;
 }
 .icon-flag_Latvia {
   background-image: url(../img/sprite.png);
-  background-position: -112px -177px;
+  background-position: -168px -177px;
   width: 56px;
   height: 29px;
 }
@@ -192,19 +198,19 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-flag_Liechtenstein {
   background-image: url(../img/sprite.png);
-  background-position: -56px -119px;
+  background-position: -112px -119px;
   width: 56px;
   height: 29px;
 }
 .icon-flag_Lithuania {
   background-image: url(../img/sprite.png);
-  background-position: -225px -29px;
+  background-position: -225px -58px;
   width: 56px;
   height: 29px;
 }
 .icon-flag_Luxembourg {
   background-image: url(../img/sprite.png);
-  background-position: -225px -58px;
+  background-position: -225px -87px;
   width: 56px;
   height: 29px;
 }
@@ -216,49 +222,49 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-flag_Malta {
   background-image: url(../img/sprite.png);
-  background-position: -225px -116px;
+  background-position: -225px -145px;
   width: 56px;
   height: 29px;
 }
 .icon-flag_Mexico {
   background-image: url(../img/sprite.png);
-  background-position: -225px -145px;
+  background-position: -225px -174px;
   width: 56px;
   height: 29px;
 }
 .icon-flag_Monaco {
   background-image: url(../img/sprite.png);
-  background-position: -225px -174px;
+  background-position: -225px -29px;
   width: 56px;
   height: 29px;
 }
 .icon-flag_Morocco {
   background-image: url(../img/sprite.png);
-  background-position: -225px 0px;
+  background-position: 0px -148px;
   width: 56px;
   height: 29px;
 }
 .icon-flag_Netherlands {
   background-image: url(../img/sprite.png);
-  background-position: 0px -148px;
+  background-position: -225px -116px;
   width: 56px;
   height: 29px;
 }
 .icon-flag_New-Zealand {
   background-image: url(../img/sprite.png);
-  background-position: -225px -87px;
+  background-position: -225px 0px;
   width: 56px;
   height: 29px;
 }
 .icon-flag_Norway {
   background-image: url(../img/sprite.png);
-  background-position: -168px -177px;
+  background-position: 0px -206px;
   width: 56px;
   height: 29px;
 }
 .icon-flag_Poland {
   background-image: url(../img/sprite.png);
-  background-position: 0px -206px;
+  background-position: -112px -90px;
   width: 56px;
   height: 29px;
 }
@@ -300,7 +306,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-flag_Visa-Countries {
   background-image: url(../img/sprite.png);
-  background-position: -169px -87px;
+  background-position: -169px -116px;
   width: 56px;
   height: 29px;
 }
@@ -312,19 +318,19 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-foot-info1 {
   background-image: url(../img/sprite.png);
-  background-position: -121px -206px;
+  background-position: -137px -206px;
   width: 12px;
   height: 14px;
 }
 .icon-foot-info2 {
   background-image: url(../img/sprite.png);
-  background-position: -133px -206px;
+  background-position: -149px -206px;
   width: 12px;
   height: 12px;
 }
 .icon-foot-info3 {
   background-image: url(../img/sprite.png);
-  background-position: -145px -206px;
+  background-position: -161px -206px;
   width: 12px;
   height: 9px;
 }
@@ -354,7 +360,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-ph {
   background-image: url(../img/sprite.png);
-  background-position: -104px -206px;
+  background-position: -87px -206px;
   width: 17px;
   height: 17px;
 }
@@ -366,7 +372,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-tw {
   background-image: url(../img/sprite.png);
-  background-position: -87px -206px;
+  background-position: -104px -206px;
   width: 17px;
   height: 17px;
 }

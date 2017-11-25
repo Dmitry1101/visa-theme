@@ -16,7 +16,7 @@
 
 @keyframes tabb {
     0%   {
-      transform: translateY(150px);
+      transform: translateY(200px);
       opacity: 0;
     }
     100% {
@@ -110,3 +110,15 @@
 
 
 
+
+
+@keyframes menuappear {
+  0%   {
+    transform: translateX(-500px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}

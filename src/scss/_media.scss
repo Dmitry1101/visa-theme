@@ -1,35 +1,429 @@
 @media (max-width: 1620px){
-	
+	.topp{
+		padding-left: 15px;
+		padding-right: 15px;
+		&__blck{
+			&-1{
+				flex-basis: 65%;
+			}
+			&-2{
+				flex-basis: 35%;
+			}
+		}
+		&__menu{
+			li{
+				margin-left: 10px;
+			}
+		}
+	}
 }	
 
 @media (max-width: 1300px){
-	
+	.topp{
+	}
+	.deliv{
+		&__it{
+			padding: 30px;
+		}
+	}
+	.offer{
+		&__it{
+			padding-left: 0;
+			padding-right: 0;
+		}
+		.blck-2{
+			padding: 50px;
+		}
+		&__head-1{
+			flex-basis: 100%;
+		}
+	}
 }
 @media (max-width: 1200px){
-	
+	.easy__num{
+		&:after{
+			display: none !important;
+		}
+	}
+	.jumbo{
+		&-1{
+			padding: 30px;
+		}
+		&__txt{
+			flex-basis: 100%;
+		}	
+	}
+
 }
 
 @media (max-width: 1140px){
+	
+	.cont-us__blck{
+		flex-basis: 100%;
+	}
+
+	.blog{
+		&__item{
+			flex-basis: 49%;
+		}	
+	}
+	.mob-menu-butt{
+		display: block;
+	}
+	.deliv{
+		&__lisst{
+			flex-wrap: wrap;
+		}
+		&__it{
+			flex-basis: 49%;
+			margin-bottom: 15px;
+		}
+	}
+	.s{
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+	
+	.deliv__butts{
+		top: -50px;
+	}
+
+	.jumbo{
+		&__head1{
+			font-size: 50px;
+		}
+		&__head2{
+			font-size: 30px;
+		}
+	}
+
+	.topp{
+		&__blck{
+			&-1{
+				flex-basis: 35%;
+			}
+			&-2{
+				flex-basis: 65%;
+			}
+		}
+		&__menu{
+			position: fixed;
+			display: none;
+			top: 0;
+	    left: 0;
+	    height: 100%;
+	    width: 100%;
+	    // background-color: rgba( $c-grn, 0.7 );
+	    background-color: $c-grn;
+	    color: $c-wh;
+	    font-size: 18px;
+	    font-family: $f-o-b;
+	    z-index: 9;
+	    padding: 100px 0px;
+	    overflow: auto;
+	    animation: menuappear .5s;
+	    a{
+	    	color: $c-wh;
+	    	display: block;
+	    	padding: 10px 15px;
+	    }
+	    li{
+	    	display: block;
+	    	margin-left: 0;
+	    	padding: 0;
+	    }
+	    .sub-menu{
+	    	position: static;
+	    	display: none;
+	    	width: 100%;
+	    	padding: 0;
+	    	a{
+	    		padding: 5px 15px;
+	    	}
+	    }
+		}
+	}
 
 }
 
 @media (max-width: 992px){
 	
+	.wrr{
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	.faqq{
+		&__itt{
+			flex-basis: 100%;
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+	}
+	.foot{
+		&__lasst{
+			float: none;
+
+		}
+		&__logo{
+			margin-left: 0;
+		}	
+	}
+	.jumbo{
+		&-1{
+			align-items: center;
+			min-height: 570px;
+		}	
+	}
+	.offer{
+		flex-wrap: wrap;
+		.offer__blck{
+			flex-basis: 100%;			
+		}
+	}
+	.testim{
+		&__cont{
+			flex-basis: 49%;
+		}
+	}
 }
 
 @media (max-width: 880px){
-	
+	.blog__blck{
+		flex-basis: 100%;
+	}
+	.inffo{
+		&__blck{
+			flex-basis: 100%;
+			&-1{
+				min-height: 410px;
+			}
+		}	
+	}
+	.insure{
+		&__blck{
+			flex-basis: 100%;
+			&-2{
+				padding-left: 15px;
+				padding-right: 15px;
+			}
+		}	
+	}
+
 }
 
 @media (max-width: 768px){
-
-}
-
-@media (max-width: 749px){
 	
 }
 
+@media (max-width: 749px){
+	.cont-us .blck-2{
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	.singl{
+		h1{
+			font-size: 27px;
+		}
+	}
+
+	.singl__line .foot__soc{
+		position: static;
+		margin-top: 30px;
+	}
+	
+	.singl__titl{
+		padding-left: 0;
+	}
+
+	.blog{
+		&__item{
+			flex-basis: 100%;
+		}	
+	}
+
+	button.accordion{
+		display: block;
+		span{
+			display: block; 
+			padding: 0 !important;
+			&.targ{
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: 6px;
+			}
+		}
+	}
+	.jumbo{
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	
+	h1{
+		font-size: 30px;
+	}
+
+	h2{
+		font-size: 26px;
+	}
+	h3{
+		font-size: 22px;
+	}
+
+	h4{
+		font-size: 22px;
+	}
+
+	h5{
+		font-size: 24px;
+	}
+
+
+
+
+	.lang-menu{
+		.sub-menu{
+			width: 240px;
+			right: 50%;
+			margin-right: -120px;
+			top: 35px;
+		}
+	}
+
+	.topp{
+		padding-top: 5px;
+		&__blck-1{
+			padding-right: 50px;
+		}
+	}
+	.mob-menu-butt{
+		position: fixed;
+		top: 0px;
+		right: 0px;
+	}
+
+	.topp{
+		display: block;
+		&__blck{
+			display: block;
+			text-align: center;
+		}
+		&__logo{
+			display: inline-block;
+		}
+		&__div{
+			display: none;
+		}
+		&__phone{
+			margin: 14px;
+			display: block;
+		}	
+		&__sel{
+			padding: 10px;
+			position: relative;
+			.icon{
+				display: inline-block;
+			}
+			// background: url('../img/down-arrow.png') center 96% no-repeat;
+			// &:after{
+			// 	content: 
+			// }
+		}
+	}
+
+	.inffo{
+		&__tbl{
+			.tbl-cell{
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			.cell-1{
+				display: none;
+			}
+			.cell-3{
+				display: none;
+			}
+		}
+		&__yw{
+			padding: 10px;
+		}
+	}
+	.insure{
+		&__title{
+			font-size: 40px;
+		}
+	}
+	.topp{
+		&__blck{
+			&-1{
+				flex-basis: 100%;
+			}
+			&-2{
+				flex-basis: 100%;
+			}
+		}
+	}
+	
+	.offer .blck-2{
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+}
+
 @media (max-width: 550px){
+	.offer{
+		.blck-1{
+			min-height: 250px;
+		}
+		&__head-1{
+			font-size: 45px;
+		}
+	}
+	.jumbo{
+		&__head1{
+			font-size: 35px;
+		}
+		&__head2{
+			font-size: 25px;
+		}
+		&__descr{
+			font-size: 20px;
+		}
+		&-1{
+			padding: 15px;
+		}
+	}
+	.foot{
+		&__it{
+			width: 50%;
+		}
+	}
+	.why__blck ul{
+		width: 100%;
+		float: none;
+	}
+
+	.testim{
+		&__title{
+			margin-bottom: 50px;
+		}
+		&__cont{
+			flex-basis: 100%;
+		}
+	}
+	.inffo__cell{
+		flex-basis: 100%;
+		min-height: 250px;
+	}
+
+	.deliv{
+		&__it{
+			flex-basis: 100%;
+		}
+	}
+
 
 }
 

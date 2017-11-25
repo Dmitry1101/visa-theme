@@ -48,6 +48,8 @@
 					'depth'           => 0,
 					'walker'          => '',
 				) ); ?>
+				
+
 
 			</div>
 			<div class="flexx__blck topp__blck topp__blck-2">
@@ -94,14 +96,19 @@
 						'depth'           => 0,
 						'walker'          => '',
 					) ); ?>
+					
+					<i class="icon icon-down-arrow"></i>
 
-
-					<?php// echo do_shortcode('[google-translator image="yes" text="yes" image_size="24"]'); ?>
-					<!-- ENGLISH -->
-					<!-- <i>&#9660;</i> -->
 				</div>
-<!-- 				<div class="topp__country">
-					<img src="<?php bloginfo('template_directory');?>/dist/img/country1.jpg" alt="">
-				</div> -->
+				
+				<div class="mob-menu-butt">
+					<button class="hamburger hamburger--stand" type="button">
+					  <span class="hamburger-box">
+					    <span class="hamburger-inner"></span>
+					  </span>
+					</button>
+				</div>
+					
+
 			</div>
 		</div>
