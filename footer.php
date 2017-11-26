@@ -168,7 +168,7 @@ if( isset( $_GET['scrollto'] ) ) : ?>
 		
 		$(function() {
 			$('html, body').animate({
-	        scrollTop: $("#<?php echo $_GET['scrollto']; ?>").offset().top - 100
+	        scrollTop: $("#<?php echo $_GET['scrollto']; ?>").offset().top - 80
 	    }, 2000);
 		});
 	

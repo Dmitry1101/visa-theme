@@ -122,7 +122,15 @@ add_action( 'widgets_init', 'visa_reservation_widgets_init' );
 /**
  * Enqueue scripts and styles.
  */
+
+
+
 function visa_reservation_scripts() {
+//	wp_enqueue_script( 'html5', 'http://html5shim.googlecode.com/svn/trunk/html5.js', array(), '65455', true );
+//	wp_enqueue_script( 'moxie', includes_url().'/js/plupload/moxie.js', array(), '1123', true );
+//	wp_enqueue_script( 'plupload.full', includes_url().'/js/plupload/plupload.full.min.js', array(), '1123', true );
+//	wp_enqueue_script( 'wp-plupload', includes_url().'/js/plupload/wp-plupload.min.js', array(), '1123', true );
+
 	wp_enqueue_style( 'visa_reservation-style', get_stylesheet_uri() );
 
 	wp_enqueue_style( 'visa_reservation--sprite-css', get_template_directory_uri() . '/dist/css/sprite.css' );
@@ -186,31 +194,7 @@ if( function_exists('acf_add_options_page') ) {
 
 
 
-function excerpt($limit) {
-  $excerpt = explode(' ', get_the_excerpt(), $limit);
-  if (count($excerpt)>=$limit) {
-    array_pop($excerpt);
-    $excerpt = implode(" ",$excerpt).'...';
-  } else {
-    $excerpt = implode(" ",$excerpt);
-  }	
-  $excerpt = preg_replace('`[[^]]*]`','',$excerpt);
-  return $excerpt;
-}
- 
-function content($limit) {
-  $content = explode(' ', get_the_content(), $limit);
-  if (count($content)>=$limit) {
-    array_pop($content);
-    $content = implode(" ",$content).'...';
-  } else {
-    $content = implode(" ",$content);
-  }	
-  $content = preg_replace('/[.+]/','', $content);
-  $content = apply_filters('the_content', $content); 
-  $content = str_replace(']]>', ']]&gt;', $content);
-  return $content;
-}
+
 
 
 
@@ -245,7 +229,7 @@ function  kd89_ajx_mail_fun(){
         obj.latesst  = $('.blog__list .blog__item').length;	
         // $('.kd-preload').css('display',)
         $('.kd-preload').fadeIn(300);	
-        console.log( obj );
+        // console.log( obj );
 
         $.post( ajaxUrl , {
          	latesst: obj.latesst,
@@ -288,7 +272,7 @@ function kd_89_mail_sending( ){
 			'orderby'             => 'date',
 	
 			// Pagination Parameters
-			'posts_per_page'         => 6,
+			'posts_per_page'         => 5,
 			'offset'                 => $_POST['latesst'],
 		);
 		
@@ -298,31 +282,12 @@ function kd_89_mail_sending( ){
 
 		if ( $kd2_query->have_posts() ) : 
 
-			 while ( $kd2_query->have_posts() ) : $kd2_query->the_post(); ?>
+			 while ( $kd2_query->have_posts() ) : $kd2_query->the_post(); 
 
-				<div data-id="<?php echo get_the_ID(); ?>" class="blog__item" style="background: url('<?php echo get_the_post_thumbnail_url( get_the_ID(), "medium_large" ); ?>') center no-repeat; -webkit-background-size: cover; background-size: cover;">
-					<div class="blog__img">
-						<img src="<?php echo get_the_post_thumbnail_url( get_the_ID(), "medium_large" ); ?>" alt="">	
-					</div>				
-					<div class="blog__content">
-						<div class="blog__date"><?php the_time('M j, Y'); ?> | <?php echo get_comments_number(); ?> comments</div>
-						<div class="blog__content-title">
+				get_template_part( 'kd89-parts/bl-post' );
+			?>
 
-							<?php the_title(); ?>
-						
-						</div>
-						<div class="blog__content-txt">
-							<p>
-								<?php 
-									echo excerpt(30);
-								?>
-							</p>
-						</div>
-						<p class="blog__content-read">
-							<a href="<?php the_permalink(); ?>">Read More ></a>
-						</p>
-					</div>
-				</div>	
+				
 				
 			<?php 
 			endwhile; 
@@ -335,4 +300,68 @@ function kd_89_mail_sending( ){
 }
 add_action('wp_ajax_nopriv_kd_89_mail_sending', 'kd_89_mail_sending'); 
 add_action('wp_ajax_kd_89_mail_sending', 'kd_89_mail_sending');
+
+
+
+
+
+
+
+////////
+/**
+ * to exclude field from notification add 'exclude[ID]' option to {all_fields} tag
+ * 'include[ID]' option includes HTML field / Section Break field description / Signature image in notification
+ * see http://www.gravityhelp.com/documentation/page/Merge_Tags for a list of standard options
+ * example: {all_fields:exclude[2,3]}
+ * example: {all_fields:include[6]}
+ * example: {all_fields:include[6],exclude[2,3]}
+ */
+add_filter( 'gform_merge_tag_filter', 'all_fields_extra_options', 11, 5 );
+function all_fields_extra_options( $value, $merge_tag, $options, $field, $raw_value ) {
+	if ( $merge_tag != 'all_fields' ) {
+		return $value;
+	}
+
+	// usage: {all_fields:include[ID],exclude[ID,ID]}
+	$include = preg_match( "/include\[(.*?)\]/", $options , $include_match );
+	$include_array = explode( ',', rgar( $include_match, 1 ) );
+
+	$exclude = preg_match( "/exclude\[(.*?)\]/", $options , $exclude_match );
+	$exclude_array = explode( ',', rgar( $exclude_match, 1 ) );
+
+	$log = "all_fields_extra_options(): {$field->label}({$field->id} - {$field->type}) - ";
+
+	if ( $include && in_array( $field->id, $include_array ) ) {
+		switch ( $field->type ) {
+			case 'html' :
+				$value = $field->content;
+				break;
+			case 'section' :
+				$value .= sprintf( '<tr bgcolor="#FFFFFF">
+                                                        <td width="20">&nbsp;</td>
+                                                        <td>
+                                                            <font style="font-family: sans-serif; font-size:12px;">%s</font>
+                                                        </td>
+                                                   </tr>
+                                                   ', $field->description );
+				break;
+			case 'signature' :
+				$url = GFSignature::get_signature_url( $raw_value );
+				$value = "<img alt='signature' src='{$url}'/>";
+				break;
+		}
+		GFCommon::log_debug( $log . 'included.' );
+	}
+	if ( $exclude && in_array( $field->id, $exclude_array ) ) {
+		GFCommon::log_debug( $log . 'excluded.' );
+		return false;
+	}
+	return $value;
+}
+
+add_filter( 'gform_display_product_summary', '__return_false' );
+
+//gravity_form_enqueue_scripts(89, true);
+
+
 

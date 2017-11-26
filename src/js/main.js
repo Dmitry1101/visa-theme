@@ -14,6 +14,17 @@ $(document).ready(function(){
 		}
 	}
 
+	
+	
+	
+	$('body').on('click', '.scrollto-delivery>a', function(){
+		if ( $('body').hasClass('home') ) {
+			$('html, body').animate({
+	        scrollTop: $("#delivery").offset().top - 80
+	    }, 2000);
+			return false;
+		}
+	});
 
 	$(window).on('resize', function(){
 		addClassToSearchOnMobile();
@@ -29,9 +40,15 @@ $(document).ready(function(){
 		}
 	});
 
+
+	$('body').on('click', '.block-click', function(e){
+		window.location = $(this).find("a.link-to-follow").attr("href"); 
+  	return false;
+	});
+	
+
 	$('body').on('click', '.topp__sel .icon', function(e){
 		e.preventDefault();
-		// console.log( $(this) );
 		if ( $('body').hasClass('is-mobile') ) {
 			$(this).siblings('.lang-menu').find('.sub-menu').slideToggle( 300 );	
 		}
@@ -48,7 +65,7 @@ $(document).ready(function(){
 		obj.curr = $(this);
 		obj.hreff = obj.curr.attr('data-hreff');
 		obj.parr = obj.curr.parents('.vidd-cont');
-		obj.parr.html( obj.hreff );
+		obj.parr.addClass('akktiff').html( obj.hreff );
 	}); 
 
 	//set active tab

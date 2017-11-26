@@ -36,7 +36,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-accord {
   background-image: url(../img/sprite.png);
-  background-position: -298px -243px;
+  background-position: -298px -247px;
   width: 6px;
   height: 11px;
 }
@@ -54,7 +54,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-cont-us-3 {
   background-image: url(../img/sprite.png);
-  background-position: -281px -143px;
+  background-position: -281px -221px;
   width: 26px;
   height: 26px;
 }
@@ -84,13 +84,13 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-down-arrow {
   background-image: url(../img/sprite.png);
-  background-position: -121px -206px;
+  background-position: -147px -206px;
   width: 16px;
   height: 16px;
 }
 .icon-fb {
   background-image: url(../img/sprite.png);
-  background-position: -281px -243px;
+  background-position: -281px -247px;
   width: 17px;
   height: 17px;
 }
@@ -318,31 +318,31 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-foot-info1 {
   background-image: url(../img/sprite.png);
-  background-position: -137px -206px;
+  background-position: -163px -206px;
   width: 12px;
   height: 14px;
 }
 .icon-foot-info2 {
   background-image: url(../img/sprite.png);
-  background-position: -149px -206px;
+  background-position: -175px -206px;
   width: 12px;
   height: 12px;
 }
 .icon-foot-info3 {
   background-image: url(../img/sprite.png);
-  background-position: -161px -206px;
+  background-position: -187px -206px;
   width: 12px;
   height: 9px;
 }
 .icon-foot-insta {
   background-image: url(../img/sprite.png);
-  background-position: -281px -35px;
+  background-position: -281px -63px;
   width: 26px;
   height: 28px;
 }
 .icon-foot-pin {
   background-image: url(../img/sprite.png);
-  background-position: -281px -63px;
+  background-position: -281px -35px;
   width: 26px;
   height: 28px;
 }
@@ -354,13 +354,13 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-foot-yt {
   background-image: url(../img/sprite.png);
-  background-position: -281px -221px;
+  background-position: -87px -206px;
   width: 26px;
   height: 22px;
 }
 .icon-ph {
   background-image: url(../img/sprite.png);
-  background-position: -87px -206px;
+  background-position: -113px -206px;
   width: 17px;
   height: 17px;
 }
@@ -372,7 +372,13 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-tw {
   background-image: url(../img/sprite.png);
-  background-position: -104px -206px;
+  background-position: -130px -206px;
   width: 17px;
   height: 17px;
+}
+.icon-week {
+  background-image: url(../img/sprite.png);
+  background-position: -281px -143px;
+  width: 26px;
+  height: 26px;
 }

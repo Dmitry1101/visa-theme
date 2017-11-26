@@ -39,7 +39,7 @@
 													<i class="icon icon-cont-us1"></i>
 												</div>
 												<div class="tbl-cell cell-2 mdl">
-													<a href="tel:+1 (919)-655-5156">+1 (919)-655-5156</a>
+													<a href="tel:<?php echo get_field('kd_acf_hp', 'option'); ?>"><?php echo get_field('kd_acf_hp', 'option'); ?></a>
 												</div>
 											</div>
 										</div>
@@ -49,7 +49,7 @@
 													<i class="icon icon-cont-us-2"></i>
 												</div>
 												<div class="tbl-cell cell-2 mdl">
-													North Carolina, USA - 27560
+													<?php echo get_field('kd89_acf_faddr', 'option'); ?>
 												</div>
 											</div>
 										</div>
@@ -65,29 +65,36 @@
 													<i class="icon icon-cont-us-3"></i>
 												</div>
 												<div class="tbl-cell cell-2 mdl">
-													<a href="mailto: service@visareservation.com">service@visareservation.com</a>
+													<a href="mailto: <?php echo get_field('kd89_acf_femail', 'option'); ?>"><?php echo get_field('kd89_acf_femail', 'option'); ?></a>
 												</div>
 											</div>
 										</div>
 										<div class="col-md-6">
 											<h4>Follow Us</h4>
-											<ul class="cont-us__soc">
-												<li>
-													<a href="#">
-														<i class="icon icon-cont-us-fb"></i>
-													</a>
-												</li>
-												<li>
-													<a href="#">
-														<i class="icon icon-cont-us-tw"></i>
-													</a>
-												</li>
-												<li>
-													<a href="#">
-														<i class="icon icon-cont-us-yt"></i>		
-													</a>
-												</li>
-											</ul>
+											
+											
+											<?php $soc_arr = ['fb','tw', 'yt']; ?>
+						
+											<?php
+											if( have_rows('kd89_acf_fsoc', 'option') ): 
+												$c = 0; ?>
+												
+												<ul class="cont-us__soc">
+
+													<?php
+											    while ( have_rows('kd89_acf_fsoc', 'option') ) : the_row(); ?>
+														
+														<li><a target="__blank" href="<?php the_sub_field('urll'); ?>"><i class="icon icon-cont-us-<?php echo $soc_arr[$c]; ?>	"></i></a></li>
+
+													<?php 
+														$c++;
+											    endwhile; ?>
+												
+												</ul>
+
+											<?php	
+											endif; ?>
+
 										</div>
 									</div>
 								</div><!-- .cont-us__sub -->
@@ -100,20 +107,20 @@
 										<div class="col-md-6">
 											<div class="tbl cont-us__tbl">
 												<div class="tbl-cell cell-1 mdl">
-													<i class="icon icon-cont-us1"></i>
+													<i class="icon icon-week"></i>
 												</div>
 												<div class="tbl-cell cell-2 mdl">
-													<a href="tel:+1 (919)-655-5156">+1 (919)-655-5156</a>
+													Monday-Friday: 24 Hours
 												</div>
 											</div>
 										</div>
 										<div class="col-md-6">
 											<div class="tbl cont-us__tbl">
 												<div class="tbl-cell cell-1 mdl">
-													<i class="icon icon-cont-us-2"></i>
+													<i class="icon icon-week"></i>
 												</div>
 												<div class="tbl-cell cell-2 mdl">
-													North Carolina, USA - 27560
+													Weekend: 24 Hours
 												</div>
 											</div>
 										</div>
@@ -124,19 +131,12 @@
 								
 								<div class="cont-us__inn">
 									
-									<p style="font-size: 30px;">
-										Duis aute irure dolor in 										
-									</p>
-									<br>
-									<!-- <p>&nbsp;</p> -->
-									<form action="" class="kd89-form cont-us__form">
-										<input type="text" class="cont-us__inp" placeholder="Full name">
-										<input type="text" class="cont-us__inp" placeholder="Your Email - Address">
-										<input type="text" class="cont-us__inp" placeholder="Subject">
-										<textarea name="" class="cont-us__area" id="" cols="30" rows="10" placeholder="Enter Your Massage here..."></textarea>
-										<input type="submit" value="Order Insurance" class="butt cont-us__subm">
-									</form>
-									
+									<div class="kd89__cont-us-form">
+										
+										<?php echo do_shortcode( '[gravityform id=62]' ) ?>		
+																				
+									</div>
+										
 								</div>
 								
 								
