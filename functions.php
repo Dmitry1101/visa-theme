@@ -272,7 +272,7 @@ function kd_89_mail_sending( ){
 			'orderby'             => 'date',
 	
 			// Pagination Parameters
-			'posts_per_page'         => 5,
+			'posts_per_page'         => 6,
 			'offset'                 => $_POST['latesst'],
 		);
 		
@@ -365,3 +365,17 @@ add_filter( 'gform_display_product_summary', '__return_false' );
 
 
 
+
+/* Adding Page URL to the Pages Admin Table
+ ========================================================================== */
+function my_custom_column( $defaults ) {
+	$defaults['url'] = 'URL';
+	return $defaults;
+}
+function add_my_custom_column( $column_name, $post_id ) {
+	if ( $column_name == 'url' ) {
+		echo get_permalink( $post_id );
+	}
+}
+add_filter( 'manage_page_posts_columns', 'my_custom_column', 10 );
+add_action( 'manage_page_posts_custom_column', 'add_my_custom_column', 10, 2 );

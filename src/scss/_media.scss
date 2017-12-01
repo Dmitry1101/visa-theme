@@ -373,6 +373,19 @@
 }
 
 @media (max-width: 550px){
+
+	.kd-comm__form{
+		.comment-form-author{
+			width: 100%;
+		}	
+		.comment-form-email{
+			width: 100%;
+		}
+		.comment-form-url{
+			width: 100%;
+		}
+	} 
+
 	.offer{
 		.blck-1{
 			min-height: 250px;

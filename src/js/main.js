@@ -14,8 +14,10 @@ $(document).ready(function(){
 		}
 	}
 
-	
-	
+
+	$("a:not(.pagin__link)").attr("target", "_blank");
+		
+	// $("a").attr("target", "_self");	
 	
 	$('body').on('click', '.scrollto-delivery>a', function(){
 		if ( $('body').hasClass('home') ) {

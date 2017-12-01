@@ -201,7 +201,12 @@
 													</div>
 													<div class="deliv__it-price">
 														
-														<?php the_sub_field('pricce'); ?>
+														<h5>
+															<?php the_sub_field('pricce'); ?>
+														</h5>
+														<p>
+															Per Person
+														</p>
 														
 													</div>
 													<div class="deliv__it-opt">
@@ -275,7 +280,7 @@
 							WE’RE HERE TO HELP
 						</div>
 						<div class="tbl-cell cell-2 mdl">
-							<a class="inffo__play play__trigger" href="#" data-hreff='<iframe width="854" height="480" src="https://www.youtube.com/embed/9HPOyGMLHy4?autoplay=1" frameborder="0" gesture="media" allowfullscreen></iframe>'>
+							<a class="inffo__play play__trigger" href="#" data-hreff='<iframe width="640" height="480" src="https://www.youtube.com/embed/9HPOyGMLHy4?autoplay=1&rel=0&autohide=1&modestbranding=1&showinfo=0" frameborder="0" allowfullscreen></iframe>'>
 
 									<i class="icon icon-play"></i>
 								</a>

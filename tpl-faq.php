@@ -500,7 +500,7 @@
 								Did Not Find the Answer You <br> 
 								Were Looking for?
 							</h2>
-							<button class="to-mod butt faqq-2__butt">Contact us now</button>
+							<a href="<?php echo get_page_link( 16 ); ?>" class="to-mod butt faqq-2__butt">Contact us now</a>
 							<p>
 								or call
 							</p>

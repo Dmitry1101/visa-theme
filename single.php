@@ -14,7 +14,7 @@ get_header(); ?>
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
-  js.src = 'https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.11';
+  js.src = 'https://connect.facebook.net/en_EN/sdk.js#xfbml=1&version=v2.11';
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
@@ -27,7 +27,7 @@ get_header(); ?>
 	<div class="mainn s content singl">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-9">
+				<div class="col-md-8">
 					
 					<div class="singl__line clearfix">
 						<div class="singl__bord">
@@ -65,20 +65,10 @@ get_header(); ?>
 
 					the_title( $before = '<h1>', $after = '</h1>', $echo = true );
 
-					the_content( ); 
-
-
-
-					if ( comments_open() || get_comments_number() ) :
-						comments_template();
-					endif; ?>
-
-
-					
-
+					the_content( ); ?>
 
 				</div>
-				<div class="col-md-3">
+				<div class="col-md-4">
 					
 					<div class="singl__head"> 
 						Related posts
@@ -134,40 +124,51 @@ get_header(); ?>
 					<div class="singl__head m-b--15"> 
 						Social Media Feeds
 					</div>
-
-
-					<div class="fb-page" data-href="https://www.facebook.com/VisaReservations/" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/VisaReservations/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/VisaReservations/">Visa Reservation</a></blockquote></div>
+			
+					<!-- fb		 -->
+					<div class="singl__widget">
+						<div class="fb-page" data-href="https://www.facebook.com/VisaReservations/" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/VisaReservations/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/VisaReservations/">Visa Reservation</a></blockquote></div>
+					</div>
 					
-						
-					<div class="kd-tw-feed">
-						
+					<!-- tw	 -->
+					<div class="singl__widget">
+						<div class="kd-tw-feed">
+							<a class="twitter-timeline" href="https://twitter.com/VisaReservation?ref_src=twsrc%5Etfw">Tweets by VisaReservation</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+						</div>
+					</div>
 					
-						<a class="twitter-timeline" href="https://twitter.com/VisaReservation?ref_src=twsrc%5Etfw">Tweets by VisaReservation</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-						
+					<!-- Pinterest			 -->
+					<div class="singl__widget">
+						<a data-pin-do="embedPin" data-pin-width="medium" href="https://www.pinterest.com/pin/99360735500167749/"></a>
+						<script async defer src="//assets.pinterest.com/js/pinit.js"></script>
 					</div>	
-
-
+	
+					
+					<!-- TW -->
+					<div class="singl__widget">
+						<div class="g-page" data-width="100%" data-href="https://plus.google.com/105817348882038409467" data-rel="publisher"></div>
+						<!-- Place this tag after the last widget tag. -->
+						<script type="text/javascript">
+						  (function() {
+						    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+						    po.src = 'https://apis.google.com/js/platform.js';
+						    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+						  })();
+						</script>
+					</div>
 				</div>
-			</div>
+			</div><!-- .row -->
 		</div>
 	</div><!-- .mainn -->		
-		
-
-<!-- post -->
-<?php endwhile; endif; ?>
-
-
-
-
-
-
-
-
-
-
-
 	
 
-<?php
+	<?php 
+		if ( comments_open() || get_comments_number() ) :
+		
+			comments_template();
+		
+		endif; 
+
+	endwhile; endif; 
 
 get_footer();

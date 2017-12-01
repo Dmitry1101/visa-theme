@@ -15,7 +15,7 @@
 <div class="foot s" style="background: url('<?php echo wp_get_attachment_image_src( get_field('kd89_acf_bg', 'option'), 'full' )[0]; ?>') center no-repeat; -webkit-background-size: cover; background-size: cover;">
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-md-6">
+			<div class="col-md-8">
 				<div class="foot__blck blck foot__blck-1 clearfix">
 					<div class="foot__it">
 						<p>
@@ -88,9 +88,58 @@
 						) ); ?>
 
 					</div>
-				</div>
-			</div>
-			<div class="col-md-6">
+				</div><!-- .foot__blck -->
+				
+				<div class="row">
+					<div class="col-md-12">
+
+						<div class="foot__flexx">
+							
+							<div class="foot__flexx-it">
+								<!-- (c) 2005, 2017. Authorize.Net is a registered trademark of CyberSource Corporation --> 
+								<div class="AuthorizeNetSeal"> <script type="text/javascript" language="javascript">var ANS_customer_id="a56d9d7b-3104-4203-8c80-90cdf50516a8";</script> <script type="text/javascript" language="javascript" src="//verify.authorize.net/anetseal/seal.js" ></script> </div>
+							</div>
+
+							<div class="foot__flexx-it paypal">
+								<!-- PayPal Logo -->
+								<table border="0" cellpadding="10" cellspacing="0" align="center"><tr><td align="center"></td></tr><tr><td align="center"><a href="https://www.paypal.com/webapps/mpp/paypal-popup" title="How PayPal Works" onclick="javascript:window.open('https://www.paypal.com/webapps/mpp/paypal-popup','WIPaypal','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=1060, height=700'); return false;"><img src="https://www.paypalobjects.com/webstatic/mktg/logo/pp_cc_mark_37x23.jpg" border="0" alt="PayPal Logo"></a></td></tr></table><!-- PayPal Logo -->
+							
+							</div>
+
+							<div class="foot__flexx-it">
+								<img src="<?php bloginfo('template_directory'); ?>/dist/img/spons-min/ssl.png" alt="">	
+							</div>
+							
+							<div class="foot__flexx-it sm">
+								<img src="<?php bloginfo('template_directory'); ?>/dist/img/spons-min/master.png" alt="">	
+							</div>
+
+							<div class="foot__flexx-it sm">
+								<img src="<?php bloginfo('template_directory'); ?>/dist/img/spons-min/visa.png" alt="">	
+							</div>
+
+							<div class="foot__flexx-it sm">
+								<img src="<?php bloginfo('template_directory'); ?>/dist/img/spons-min/discover.png" alt="">	
+							</div>	
+
+							<div class="foot__flexx-it sm">
+								<img src="<?php bloginfo('template_directory'); ?>/dist/img/spons-min/express.png" alt="">	
+							</div>	
+
+						</div>
+
+
+						
+						
+				
+							
+						
+
+					</div>
+				</div><!-- .row -->
+
+			</div><!-- .col-md-8 -->
+			<div class="col-md-4">
 				<div class="foot__blck blck foot__blck-2 clearfix">
 					<div class="foot__lasst fl-rght">
 						

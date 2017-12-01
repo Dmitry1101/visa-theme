@@ -8,53 +8,50 @@
  */
 
 get_header(); ?>
+	
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+	<div class="mainn s content">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="wrr">
+						
 
-			<section class="error-404 not-found">
-				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'visa_reservation' ); ?></h1>
-				</header><!-- .page-header -->
+						<section class="error-404 not-found">
+							<header class="page-header">
+								<h1 class="page-title txt-cent"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'visa_reservation' ); ?></h1>
+							</header><!-- .page-header -->
 
-				<div class="page-content">
-					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'visa_reservation' ); ?></p>
+							<div class="page-content">
+								<p class="txt-cent"><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'visa_reservation' ); ?></p>
 
-					<?php
-						get_search_form();
+								
+								<?php
+									get_search_form(); ?>
+								
 
-						the_widget( 'WP_Widget_Recent_Posts' );
-					?>
+								<?php
+									the_widget( 'WP_Widget_Recent_Posts' );
+								?>
 
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'visa_reservation' ); ?></h2>
-						<ul>
-						<?php
-							wp_list_categories( array(
-								'orderby'    => 'count',
-								'order'      => 'DESC',
-								'show_count' => 1,
-								'title_li'   => '',
-								'number'     => 10,
-							) );
-						?>
-						</ul>
-					</div><!-- .widget -->
+								
 
-					<?php
+							</div><!-- .page-content -->
+						</section><!-- .error-404 -->
 
-						/* translators: %1$s: smiley */
-						$archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'visa_reservation' ), convert_smilies( ':)' ) ) . '</p>';
-						the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
+						<?php 
 
-						the_widget( 'WP_Widget_Tag_Cloud' );
-					?>
+						// the_content( ); ?>
+						
 
-				</div><!-- .page-content -->
-			</section><!-- .error-404 -->
+					</div><!-- .wrr -->
+				</div>
+			</div>
+		</div>
+	</div><!-- .mainn -->		
+	
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+	
 
 <?php
 get_footer();
