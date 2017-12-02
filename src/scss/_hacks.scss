@@ -155,16 +155,22 @@ blockquote{
 	padding-left: 20px;
 	line-height: 1.7;
 	position: relative;
-	// &:before{
-	// 	content:"";
-	// 	display: flex;
-	// 	width: 9px;
-	// 	height: 100%;
-	// 	background-color: $c-yw;
-	// }
 }
 
 .content{
+	
+	blockquote{
+		font-size: 18px;
+		padding-left: 20px;
+		line-height: 1.3;
+		margin: 20px 0 40px;
+		p{
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+	}
+
 	font-weight: normal;
 	line-height: 1.2;
 	p{

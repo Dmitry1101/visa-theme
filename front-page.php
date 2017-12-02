@@ -31,66 +31,51 @@
 				
 				</div>
 			</div>
-			<div class="offer__blck blck-2">
-				<div class="row">
-					<div class="col-md-6">
-						<div class="offer__it blck">
-							<div class="offer__head-2">
-								<span>
-									<i class="icon icon-airplane"></i>										
-								</span>
-								Flight itinerary
-							</div>
-							<div class="offer__txt">
-								<p>We provide verifiable one way, round trip, and multi-city flight bookings for any country visa within minutes at an affordable price without you having to pay for actual tickets.</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-6">
-						<div class="offer__it blck">
-							<div class="offer__head-2">
-								<span>
-									<i class="icon icon-002-building"></i>										
-								</span>
-								Hotel booking
-							</div>
-							<div class="offer__txt">
-								<p>We provide verifiable one way, round trip, and multi-city flight bookings for any country visa within minutes at an affordable price without you having to pay for actual tickets.</p>
-							</div>
-						</div>
-					</div>
-				</div>
+			
+			<?php 	
+			if( have_rows('kd89_acf_offer') ): ?>
 
-				<div class="row">
-					<div class="col-md-6">
-						<div class="offer__it blck">
-							<div class="offer__head-2">
-								<span>
-									<i class="icon icon-003-insurance"></i>										
-								</span>
-								Travel insurance
+				<div class="offer__blck blck-2">
+					<div class="row">
+						
+						<?php
+						$cc = 0;
+						$arrr = [ 'airplane','002-building','003-insurance','001-money' ];
+					  while ( have_rows('kd89_acf_offer') ) : the_row(); ?>
+							
+							<div class="col-md-6">
+								<div class="offer__it blck">
+									<div class="offer__head-2">
+										<span>
+											<i class="icon icon-<?php echo $arrr[$cc]; ?>"></i>										
+										</span>
+										<?php the_sub_field('titl'); ?>
+									</div>
+									<div class="offer__txt">
+										<p><?php the_sub_field('txt'); ?></p>
+									</div>
+								</div>
 							</div>
-							<div class="offer__txt">
-								<p>We provide verifiable one way, round trip, and multi-city flight bookings for any country visa within minutes at an affordable price without you having to pay for actual tickets.</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-6">
-						<div class="offer__it blck">
-							<div class="offer__head-2">
-								<span>
-									<i class="icon icon-001-money"></i>										
-								</span>
-								Buyer protection
-							</div>
-							<div class="offer__txt">
-								<p>We provide verifiable one way, round trip, and multi-city flight bookings for any country visa within minutes at an affordable price without you having to pay for actual tickets.</p>
-							</div>
-						</div>
-					</div>
-				</div>
+							
+						<?php
+							$cc++;
+							if ( $cc % 2 == 0 ): ?>
+								
+								</div>
+								<div class="row">
 
-			</div>
+							<?php
+							endif;		
+					  endwhile; ?>
+
+					</div>
+				</div><!-- .offer__blck blck-2 -->
+
+			<?php
+			endif;
+			 ?>	
+
+			
 		</div><!-- .offer -->
 		
 
@@ -106,47 +91,39 @@
 						</div>
 					</div>
 				</div>
-				<div class="row">
-					<div class="col-md-4" >
-						<div class="blck easy__blck easy__blck-1">
-							<div class="easy__num">
-								1
+
+				<?php 	
+				if( have_rows('steps') ): ?>
+					
+					<div class="row">
+
+						<?php
+						$c = 1;
+					  while ( have_rows('steps') ) : the_row(); ?>
+							
+							<div class="col-md-4" >
+								<div class="blck easy__blck easy__blck-<?php echo $c; ?>">
+									<div class="easy__num">
+										<?php the_sub_field( 'txt1' ); ?>
+									</div>
+									<div class="easy__head">
+										<?php the_sub_field( 'txt2' ); ?>
+									</div>
+									<div class="easy__txt">
+										<p><?php the_sub_field( 'txt3' ); ?></p>
+									</div>
+								</div>
 							</div>
-							<div class="easy__head">
-								Select Plan
-							</div>
-							<div class="easy__txt">
-								<p>Choose a plan that suits your needs. We offer normal and priority deliveries.</p>
-							</div>
-						</div>
+
+						<?php	
+							$c++;			
+					  endwhile; ?>
+					
 					</div>
-					<div class="col-md-4">
-						<div class="blck easy__blck easy__blck-2">
-							<div class="easy__num">
-								2
-							</div>
-							<div class="easy__head">
-								Submit Travel Details & Pay
-							</div>
-							<div class="easy__txt">
-								<p>Provide trip details for you and your family. Make payment through paypal, debit or credit card.</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="blck easy__blck easy__blck-3">
-							<div class="easy__num">
-								3
-							</div>
-							<div class="easy__head">
-								Receive Itinerary in Email
-							</div>
-							<div class="easy__txt">
-								<p>Hassle free online delivery of documents directly to your email within minutes.</p>
-							</div>
-						</div>
-					</div>
-				</div>
+
+				<?php				
+				endif; ?>
+				
 			</div>
 		</div><!-- .easy -->
 
@@ -252,14 +229,14 @@
 			<div class="insure__blck insure__blck-2">
 				<div class="insure__cont">
 					<div class="insure__title">
-						Need Travel <br>
-						Health Insurance?
+						<!-- Need Travel <br>
+						Health Insurance? -->
+						<?php the_field('kd_acf_ins'); ?>
 					</div>
 					<div class="insure__txt">
-						<p>
-							Applying for a travel visa? Embassy doesn’t recommend you to buy actual <br> 
-							tickets until visa is approved. So why risk money and time?
-						</p>
+						
+						<?php the_content(); ?>
+
 						<p>
 							<a href="<?php echo get_page_link( 239 ); ?>" class="to-mod butt insure__butt">
 								Order Insurance
@@ -342,141 +319,35 @@
 					</div>
 				</div>
 				
-
-
-
-				<div class="testim__list flexx flexx-wrap">
+				<?php 	
+				if( have_rows('kd89_acf_testim') ): ?>
 					
-					
-					<div class="testim__cont testim__cont-1">
-						<img src="<?php bloginfo('template_directory');?>/dist/img/testim1.png" alt="" class="testim__cont-img">
-						<div class="testim__txt"><p>
-								«Fast and Reliable service! I got my flight itinerary for visa within the requested time. I was able to verify the reservation directly on the airlines website as well. Highly Recommend!!»
-							</p>
-						</div>
-						<div class="testim__author">
-							<p>
-								<b>SATIAGO LOPEZ,</b> Colombia
-							</p>	
-						</div>
-					</div>
+					<div class="testim__list flexx flexx-wrap">
 
+						<?php					
+					  while ( have_rows('kd89_acf_testim') ) : the_row(); ?>
+							
+							<div class="testim__cont testim__cont-1">
+								<img src="<?php echo wp_get_attachment_image_src( get_sub_field( 'imgg' ) )[0]; ?>" alt="" class="testim__cont-img">
+								<div class="testim__txt">
 
-					<div class="testim__cont testim__cont-1">
-						<img src="<?php bloginfo('template_directory');?>/dist/img/testim2.png" alt="" class="testim__cont-img">
-						<div class="testim__txt"><p>
-								To apply for Schengen visa, we came across this website to buy travel insurance for visa. The insurance service these guys provide is terrific. No hassle and we got our visa approved
-							</p>
-						</div>
-						<div class="testim__author">
-							<p>
-								<b>KUNAL SINGH,</b> India
-							</p>
-						</div>	
-					</div>
+									<?php the_sub_field('txtt'); ?>
+									
+								</div>
+								<div class="testim__author">
+									
+									<?php the_sub_field('txtt2'); ?>
+										
+								</div>
+							</div>
 
-					<div class="testim__cont testim__cont-1">
-						<img src="<?php bloginfo('template_directory');?>/dist/img/testim3.png" alt="" class="testim__cont-img">
-						<div class="testim__txt">
-							<p>
-								I placed an order for hotel booking for visa. I received my hotel itinerary for visa on time without any issues. Moreover the team didn’t charge any additional dollars for corrections to my itinerary!
-							</p>
-						</div>
-						<div class="testim__author">	
-							<p>
-								<b>ANIMESH GUPTA,</b> UAE
-							</p>
-						</div>
-					</div>
-
-					<div class="testim__cont testim__cont-1">
-						<img src="<?php bloginfo('template_directory');?>/dist/img/testim4.png" alt="" class="testim__cont-img">
-						<div class="testim__txt">
-							<p>
-								Great Job Visa Reservation Team! My visa got approved. I highly recommend using this service to folks looking for flight reservations for visa, hotel bookings for visa and travel medical insurance for visa!! Hassle free.
-							</p>
-						</div>
-						<div class="testim__author">	
-							<p>
-								<b>BENJAMIN ADAMS,</b> United States
-							</p>
-						</div>	
-					</div>
-
-
-					<div class="testim__cont testim__cont-1">
-						<img src="<?php bloginfo('template_directory');?>/dist/img/testim5.png" alt="" class="testim__cont-img">
-						<div class="testim__txt"><p>
-								I ordered the priority delivery package (Flight+Hotel+Insurance) for my visa application at 11:30 PM EST and got it within an hour! I reached out to them using online chat and got questions clarified instantly! Loved it!
-							</p>
-						</div>
-						<div class="testim__author">
-							<p>
-								<b>VACI TOMAKOE,</b> Africa
-							</p>	
-						</div>
-					</div>
-
-
-					<div class="testim__cont testim__cont-1">
-						<img src="<?php bloginfo('template_directory');?>/dist/img/testim6.png" alt="" class="testim__cont-img">
-						<div class="testim__txt"><p>
-								Visa Reservation Team was very friendly and always available to help with questions during our visa application process!! Glad we chose these guys! Also group travel discounts helped us keep our budget intact.
-							</p>
-						</div>
-						<div class="testim__author">
-							<p>
-								<b>MARY BOYD,</b> Canada
-							</p>
-						</div>	
-					</div>
-
-					<div class="testim__cont testim__cont-1">
-						<img src="<?php bloginfo('template_directory');?>/dist/img/testim7.png" alt="" class="testim__cont-img">
-						<div class="testim__txt">
-							<p>
-								After coming across various websites offering such services, this was the only website that gave me a warm feeling that it is genuine. So i tried it out and it was worth my time and money! Reservations were verifiable on airlines. I got my Visa too. Yayyy!
-							</p>
-						</div>
-						<div class="testim__author">	
-							<p>
-								<b>ONEIL MCLEANNE,</b> Germany
-							</p>
-						</div>
-					</div>
-
-					<div class="testim__cont testim__cont-1">
-						<img src="<?php bloginfo('template_directory');?>/dist/img/testim8.png" alt="" class="testim__cont-img">
-						<div class="testim__txt">
-							<p>
-								The variety of services this website offered were very helpful because we initially wanted to order flight itinerary for visa but ended up getting hotel reservations for visa and travel medical insurance for Schengen visa too. Truly professional and super fast service!
-							</p>
-						</div>
-						<div class="testim__author">	
-							<p>
-								<b>ALEK BRION,</b> Spain
-							</p>
-						</div>	
-					</div>
-
-
-				</div>
+						<?php							
+					  endwhile; ?>
 				
-				<!-- <div class="testim__blck blck">
-			<div class="testim__cont testim__cont-1">
-				<img src="<?php bloginfo('template_directory');?>/dist/img/testim1.png" alt="" class="testim__cont-img">
-				<div class="testim__txt"><p>
-						«Fast and Reliable service! I got my flight itinerary for visa within the requested time. I was able to verify the reservation directly on the airlines website as well. Highly Recommend!!»
-					</p>
-					
-				</div>
-				<p>
-					<b>SATIAGO LOPEZ,</b> Colombia
-				</p>
-			</div>
-		</div> -->
+					</div>
 
-
+				<?php
+				endif; ?>
 
 
 			</div>
@@ -490,31 +361,10 @@
 							<div class="sect-title under under-1">
 								Why Choose Us
 							</div>
-							<ul>
-								<li>All our itineraries are verifiable</li>
-								<li>
-									Support for any country visa
-								</li>
-								<li>
-									24/7 customer support
-								</li>
-								<li>
-									We offer group traveler discounts
-								</li>
-							</ul>
-
-							<ul>
-								<li>100% buyer protection - Paypal</li>
-								<li>
-									Online chat, emtail and phone
-								</li>
-								<li>
-									Refund available, if visa is denied
-								</li>
-								<li>
-									Affordable pricing and reliable service
-								</li>
-							</ul>
+							
+							<?php the_field('kd89_why_choose_us'); ?>
+								
+							<?php the_field('kd89_why_choose_us2'); ?>
 
 						</div>
 					</div>

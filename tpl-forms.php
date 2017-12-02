@@ -1,7 +1,7 @@
 <?php /* Template Name: Gravity Forms*/ get_header(); ?>
 	<div id="gravityforms-block">
 		<div class="row-forms">
-			<?php echo do_shortcode( '[gravityform id=67]' ); ?>
+			<?php echo do_shortcode( '[gravityform id=98]' ); ?>
 		</div>
 	</div>
 
